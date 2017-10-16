@@ -45,18 +45,28 @@
 // Color system
 //
 $white: #fff !default;
-$gray-100: #f5f5f5; //blubird
+$gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
-$gray-400: #ccc; //blubird
+$gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #808080; //blubird
+$gray-600: #868e96 !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #3f3f3f; // blubird
-$black: #000;
+$gray-900: #212529 !default;
+$black: #000 !default;
 
-$blue: #0079BD; // blubird
+$grays: ( 100: $gray-100,
+200: $gray-200,
+300: $gray-300,
+400: $gray-400,
+500: $gray-500,
+600: $gray-600,
+700: $gray-700,
+800: $gray-800,
+900: $gray-900) !default;
+
+$blue: #007bff !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
@@ -66,7 +76,6 @@ $yellow: #ffc107 !default;
 $green: #28a745 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
-
 
 $colors: ( blue: $blue,
 indigo: $indigo,
@@ -80,7 +89,7 @@ teal: $teal,
 cyan: $cyan,
 white: $white,
 gray: $gray-600,
-gray-dark: $gray-800);
+gray-dark: $gray-800) !default;
 
 $theme-colors: ( primary: $blue,
 secondary: $gray-600,
@@ -88,13 +97,13 @@ success: $green,
 info: $cyan,
 warning: $yellow,
 danger: $red,
-light: $white,
-dark: $indigo);
+light: $gray-100,
+dark: $gray-800) !default;
 //
 // Set a specific jump point for requesting color jumps
 //$theme-color-interval: 8% !default;
-// Options
-//
+/****** Options ******/
+
 // Quickly modify global styling by enabling or disabling optional features.
 //$enable-rounded:            true !default;
 //$enable-shadows:            false !default;
@@ -103,7 +112,9 @@ dark: $indigo);
 //$enable-hover-media-query:  false !default;
 //$enable-grid-classes:       true !default;
 //$enable-print-styles:       true !default;
-// Spacing
+//
+/****** Spacing ******/
+
 //
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
@@ -124,13 +135,15 @@ dark: $indigo);
 //75: 75%,
 //100: 100%
 //) !default;
-// Body
 //
+/****** Body ******/
+
 // Settings for the `<body>` element.
 //$body-bg:       $white !default;
 //$body-color:    $gray-900 !default;
-// Links
 //
+/****** Links ******/
+
 // Style anchor elements.
 $link-color: theme-color("primary");
 //$link-decoration:       none !default;
@@ -164,12 +177,13 @@ $grid-breakpoints: (
 */
 
 //@include _assert-ascending($container-max-widths, "$container-max-widths");
-// Grid columns
-//
+/****** Grid columns ******/
+
 // Set the number of columns and specify the width of the gutters.
 //$grid-columns: 12 !default;
 //$grid-gutter-width: 30px !default;
-// Components
+/****** Components ******/
+
 //
 // Define common padding and border radius sizes and more.
 //$line-height-lg:         1.5 !default;
@@ -184,8 +198,10 @@ $grid-breakpoints: (
 //$transition-base:        all .2s ease-in-out !default;
 //$transition-fade:        opacity .15s linear !default;
 //$transition-collapse:    height .35s ease !default;
-// Fonts
 //
+//
+/****** Fonts ******/
+
 // Font, line-height, and color for body text, headings, and more.
 $font-family-sans-serif: 'Raleway',
 "Helvetica Neue",
@@ -210,21 +226,24 @@ sans-serif;
 //$h4-font-size: 1.5rem !default;
 //$h5-font-size: 1.25rem !default;
 //$h6-font-size: 1rem !default;
+//
 //$headings-margin-bottom: ($spacer / 2) !default;
-$headings-font-family: $font-family-sans-serif;
-$headings-font-weight: 700;
-//$headings-line-height:   1.1 !default;
-//$headings-color:         inherit !default;
+//$headings-font-family : inherit !default;
+//$headings-font-weight : 500 !default;
+//$headings-line-height : 1.1 !default;
+//$headings-color       : inherit !default;
+//
 //$display1-size: 6rem !default;
 //$display2-size: 5.5rem !default;
 //$display3-size: 4.5rem !default;
-$display4-size: 3rem;
+//$display4-size: 3.5rem !default;
+//
 //$display1-weight:     300 !default;
 //$display2-weight:     300 !default;
 //$display3-weight:     300 !default;
-$display4-weight: 700;
-
+//$display4-weight:     300 !default;
 //$display-line-height: $headings-line-height !default;
+//
 //$lead-font-size:   1.25rem !default;
 //$lead-font-weight: 300 !default;
 //$small-font-size: 80% !default;
@@ -239,8 +258,10 @@ $display4-weight: 700;
 //$nested-kbd-font-weight: $font-weight-bold !default;
 //$list-inline-padding: 5px !default;
 //$mark-bg: #fcf8e3 !default;
-// Tables
 //
+//
+/****** Tables ******/
+
 // Customizes the `.table` component with basic values, each used across all table variations.
 //$table-cell-padding:            .75rem !default;
 //$table-cell-padding-sm:         .3rem !default;
@@ -257,7 +278,10 @@ $display4-weight: 700;
 //$table-inverse-hover-bg:        rgba($white, .075) !default;
 //$table-inverse-border-color:    lighten($gray-900, 7.5%) !default;
 //$table-inverse-color:           $body-bg !default;
-// Buttons
+//
+//
+/****** Buttons ******/
+
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 //$input-btn-padding-y:       .5rem !default;
@@ -280,7 +304,10 @@ $display4-weight: 700;
 //$btn-border-radius-lg:           $border-radius-lg !default;
 //$btn-border-radius-sm:           $border-radius-sm !default;
 //$btn-transition:                 all .15s ease-in-out !default;
-// Forms
+//
+//
+/****** Forms ******/
+
 //$input-bg:                       $white !default;
 //$input-disabled-bg:              $gray-200 !default;
 //$input-color:                    $gray-700 !default;
@@ -312,6 +339,7 @@ $display4-weight: 700;
 //$form-group-margin-bottom:       1rem !default;
 //$input-group-addon-bg:           $gray-200 !default;
 //$input-group-addon-border-color: $input-border-color !default;
+//
 //$custom-control-gutter:   1.5rem !default;
 //$custom-control-spacer-y: .25rem !default;
 //$custom-control-spacer-x: 1rem !default;
@@ -377,11 +405,15 @@ $display4-weight: 700;
 //    en: "Browse"
 //  )
 //) !default;
-// Form validation
+//
+/****** Form validation ******/
+
 //$form-feedback-valid-color:   theme-color("success") !default;
 //$form-feedback-invalid-color: theme-color("danger") !default;
-// Dropdowns
 //
+//
+/****** Dropdowns ******/
+
 // Dropdown menu container and contents.
 //$dropdown-min-width:             10rem !default;
 //$dropdown-padding-y:             .5rem !default;
@@ -400,7 +432,10 @@ $display4-weight: 700;
 //$dropdown-item-padding-y:        .25rem !default;
 //$dropdown-item-padding-x:        1.5rem !default;
 //$dropdown-header-color:          $gray-600 !default;
-// Z-index master list
+//
+//
+/****** Z-index master list ******/
+
 //
 // Warning: Avoid customizing these values. They're used for a bird's eye view
 // of components dependent on the z-axis and are designed to all work together.
@@ -411,7 +446,10 @@ $display4-weight: 700;
 //$zindex-modal:              1050 !default;
 //$zindex-popover:            1060 !default;
 //$zindex-tooltip:            1070 !default;
-// Navs
+//
+//
+/****** Navs ******/
+
 //$nav-link-padding-y:            .5rem !default;
 //$nav-link-padding-x:            1rem !default;
 //$nav-link-disabled-color:       $gray-600 !default;
@@ -422,34 +460,45 @@ $display4-weight: 700;
 //$nav-tabs-link-active-color:                  $gray-700 !default;
 //$nav-tabs-link-active-bg:                     $body-bg !default;
 //$nav-tabs-link-active-border-color:           #ddd !default;
+//
 //$nav-pills-border-radius:     $border-radius !default;
 //$nav-pills-link-active-color: $component-active-color !default;
 //$nav-pills-link-active-bg:    $component-active-bg !default;
-// Navbar
+//
+//
+/****** Navbar ******/
+
 //$navbar-padding-y:                  ($spacer / 2) !default;
 //$navbar-padding-x:                  $spacer !default;
+//
 //$navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 //$nav-link-height:                   $navbar-brand-font-size * $line-height-base !default;
 //$navbar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
 //$navbar-brand-padding-y:            ($navbar-brand-height - $nav-link-height) / 2 !default;
+//
 //$navbar-toggler-padding-y:           .25rem !default;
 //$navbar-toggler-padding-x:           .75rem !default;
 //$navbar-toggler-font-size:           $font-size-lg !default;
 //$navbar-toggler-border-radius:       $btn-border-radius !default;
-$navbar-dark-color:                   rgba($white, .75);
-$navbar-dark-hover-color:             rgba($white, 1);
-//$navbar-dark-active-color:          rgba($white,1) !default;
-//$navbar-dark-disabled-color:        rgba($white,.25) !default;
-$navbar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' fill='#ffffff' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
-//$navbar-dark-toggler-border-color:  rgba($white,.1) !default;
-$navbar-light-color:                  rgba(theme-color('primary'),.75);
-$navbar-light-hover-color:            rgba(theme-color('primary'),1);
-//$navbar-light-active-color:         rgba($black,.9) !default;
-//$navbar-light-disabled-color:       rgba($black,.3) !default;
-$navbar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{theme-color('primary')}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
-//$navbar-light-toggler-border-color: rgba($black,.1) !default;
-// Pagination
+//
+//$navbar-dark-color : rgba($white, .5) !default;
+//$navbar-dark-hover-color : rgba($white, .75) !default;
+//$navbar-dark-active-color : rgba($white, 1) !default;
+//$navbar-dark-disabled-color : rgba($white, .25) !default;
+//$navbar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+//$navbar-dark-toggler-border-color : rgba($white, .1) !default;
+//
+//$navbar-light-color : rgba($black, .5) !default;
+//$navbar-light-hover-color : rgba($black, .7) !default;
+//$navbar-light-active-color : rgba($black, .9) !default;
+//$navbar-light-disabled-color : rgba($black, .3) !default;
+//$navbar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+//$navbar-light-toggler-border-color: rgba($black, .1) !default;
+//
+//
+/****** Pagination ******/
+
 //$pagination-padding-y:                .5rem !default;
 //$pagination-padding-x:                .75rem !default;
 //$pagination-padding-y-sm:             .25rem !default;
@@ -470,26 +519,36 @@ $navbar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,
 //$pagination-disabled-color:            $gray-600 !default;
 //$pagination-disabled-bg:               $white !default;
 //$pagination-disabled-border-color:     #ddd !default;
-// Jumbotron
+//
+//
+/****** Jumbotron ******/
+
 //$jumbotron-padding:              2rem !default;
 //$jumbotron-bg:                   $gray-200 !default;
-// Cards
-$card-spacer-y: 1px;
-$card-spacer-x: 1px;
-$card-title-margin: 1rem auto 2rem;
-$card-border-width: 0;
-$card-border-radius: 0;
+//
+//
+/****** Cards ******/
 
-//$card-border-color:        rgba($black,.125) !default;
+//$card-spacer-y : .75rem !default;
+//$card-spacer-x : 1.25rem !default;
+//$card-border-width : 1px !default;
+//$card-border-radius : $border-radius !default;
+//$card-border-color : rgba($black, .125) !default;
 //$card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) !default;
-//$card-cap-bg:              rgba($black, .03) !default;
-$card-bg: $white;
+//$card-cap-bg : rgba($black, .03) !default;
+//$card-bg : $white !default;
+//
 //$card-img-overlay-padding: 1.25rem !default;
-//$card-deck-margin:          ($grid-gutter-width / 2) !default;
-//$card-columns-count:        3 !default;
-$card-columns-gap: $card-spacer-x;
-$card-columns-margin: $card-spacer-y;
-// Tooltips
+//
+//$card-deck-margin : ($grid-gutter-width / 2) !default;
+//
+//$card-columns-count : 3 !default;
+//$card-columns-gap : 1.25rem !default;
+//$card-columns-margin : $card-spacer-y !default;
+//
+//
+/****** Tooltips ******/
+
 //$tooltip-max-width:           200px !default;
 //$tooltip-color:               $white !default;
 //$tooltip-bg:                  $black !default;
@@ -497,10 +556,14 @@ $card-columns-margin: $card-spacer-y;
 //$tooltip-padding-y:           3px !default;
 //$tooltip-padding-x:           8px !default;
 //$tooltip-margin:              0 !default;
+//
 //$tooltip-arrow-width:         5px !default;
 //$tooltip-arrow-height:        5px !default;
 //$tooltip-arrow-color:         $tooltip-bg !default;
-// Popovers
+//
+//
+/****** Popovers ******/
+
 //$popover-inner-padding:               1px !default;
 //$popover-bg:                          $white !default;
 //$popover-max-width:                   276px !default;
@@ -519,7 +582,10 @@ $card-columns-margin: $card-spacer-y;
 //$popover-arrow-color:                 $popover-bg !default;
 //$popover-arrow-outer-width:           ($popover-arrow-width + 1px) !default;
 //$popover-arrow-outer-color:           fade-in($popover-border-color, .05) !default;
-// Badges
+//
+//
+/****** Badges ******/
+
 //$badge-color:                 $white !default;
 //$badge-font-size:             75% !default;
 //$badge-font-weight:           $font-weight-bold !default;
@@ -529,7 +595,10 @@ $card-columns-margin: $card-spacer-y;
 // Use a higher than normal value to ensure completely rounded edges when
 // customizing padding or font-size on labels.
 //$badge-pill-border-radius:    10rem !default;
-// Modals
+//
+//
+/****** Modals ******/
+
 // Padding applied to the modal body
 //$modal-inner-padding:         15px !default;
 //$modal-dialog-margin:         10px !default;
@@ -551,8 +620,9 @@ $card-columns-margin: $card-spacer-y;
 //$modal-md:                    500px !default;
 //$modal-sm:                    300px !default;
 //$modal-transition:            transform .3s ease-out !default;
-// Alerts
 //
+/****** Alerts ******/
+
 // Define alert colors, border radius, and padding.
 //$alert-padding-y:             .75rem !default;
 //$alert-padding-x:             1.25rem !default;
@@ -570,7 +640,8 @@ $card-columns-margin: $card-spacer-y;
 //$progress-bar-bg:               theme-color("primary") !default;
 //$progress-bar-animation-timing: 1s linear infinite !default;
 //$progress-bar-transition:       width .6s ease !default;
-// List group
+/****** List group ******/
+
 //$list-group-bg:                  $white !default;
 //$list-group-border-color:        rgba($black,.125) !default;
 //$list-group-border-width:        $border-width !default;
@@ -587,7 +658,9 @@ $card-columns-margin: $card-spacer-y;
 //$list-group-action-hover-color:       $list-group-action-color !default;
 //$list-group-action-active-color:      $body-color !default;
 //$list-group-action-active-bg:         $gray-200 !default;
-// Image thumbnails
+//
+/****** Image thumbnails ******/
+
 //$thumbnail-padding:           .25rem !default;
 //$thumbnail-bg:                $body-bg !default;
 //$thumbnail-border-width:      $border-width !default;
@@ -595,7 +668,9 @@ $card-columns-margin: $card-spacer-y;
 //$thumbnail-border-radius:     $border-radius !default;
 //$thumbnail-box-shadow:        0 1px 2px rgba($black,.075) !default;
 //$thumbnail-transition:        all .2s ease-in-out !default;
-// Figures
+//
+/****** Figures ******/
+
 //$figure-caption-font-size: 90% !default;
 //$figure-caption-color:     $gray-600 !default;
 // Breadcrumbs
@@ -606,7 +681,9 @@ $card-columns-margin: $card-spacer-y;
 //$breadcrumb-divider-color:      $gray-600 !default;
 //$breadcrumb-active-color:       $gray-600 !default;
 //$breadcrumb-divider:            "/" !default;
-// Carousel
+//
+/****** Carousel ******/
+
 //$carousel-control-color:                      $white !default;
 //$carousel-control-width:                      15% !default;
 //$carousel-control-opacity:                    .5 !default;
@@ -620,12 +697,16 @@ $card-columns-margin: $card-spacer-y;
 //$carousel-control-prev-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"), "#", "%23") !default;
 //$carousel-control-next-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"), "#", "%23") !default;
 //$carousel-transition:           transform .6s ease !default;
-// Close
+//
+/****** Close ******/
+
 //$close-font-size:             $font-size-base * 1.5 !default;
 //$close-font-weight:           $font-weight-bold !default;
 //$close-color:                 $black !default;
 //$close-text-shadow:           0 1px 0 $white !default;
-// Code
+//
+/****** Code ******/
+
 //$code-font-size:              90% !default;
 //$code-padding-y:              .2rem !default;
 //$code-padding-x:              .4rem !default;

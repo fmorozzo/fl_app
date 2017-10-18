@@ -44,30 +44,27 @@
 //
 // Color system
 //
-$white: #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black: #000 !default;
-
+$white: #fff;
+$gray-100: #f5f5f5; // FL
+//$gray-200: #e9ecef;
+//$gray-300: #dee2e6;
+$gray-400: #CCC; //FL
+$gray-500: #AAA; // FL
+//$gray-600: #868e96;
+//$gray-700: #495057;
+$gray-800: #3f3f3f; // FL
+//$gray-900: #212529;
+$black: #000; // FL
+//
 $grays: ( 100: $gray-100,
-200: $gray-200,
-300: $gray-300,
 400: $gray-400,
 500: $gray-500,
-600: $gray-600,
-700: $gray-700,
-800: $gray-800,
-900: $gray-900) !default;
+800: $gray-800);
 
-$blue: #007bff !default;
+$blue: #003A6F; // FL
+$squirel: #FF595A; // FL
 $indigo: #6610f2 !default;
+$turquoise: #7ED6D6; //FL
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
 $red: #dc3545 !default;
@@ -78,6 +75,8 @@ $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
 
 $colors: ( blue: $blue,
+squirel: $squirel,
+turquoise: $turquoise,
 indigo: $indigo,
 purple: $purple,
 pink: $pink,
@@ -88,17 +87,19 @@ green: $green,
 teal: $teal,
 cyan: $cyan,
 white: $white,
-gray: $gray-600,
-gray-dark: $gray-800) !default;
+gray: $gray-500,
+gray-dark: $gray-800);
 
-$theme-colors: ( primary: $blue,
-secondary: $gray-600,
+$theme-colors: ( main:$blue,
+primary: $squirel,
+secondary: $turquoise,
 success: $green,
 info: $cyan,
 warning: $yellow,
 danger: $red,
-light: $gray-100,
-dark: $gray-800) !default;
+light: $white,
+dark: $blue,
+borders:rgba(0, 58, 111, 0.5));
 //
 // Set a specific jump point for requesting color jumps
 //$theme-color-interval: 8% !default;
@@ -139,8 +140,8 @@ dark: $gray-800) !default;
 /****** Body ******/
 
 // Settings for the `<body>` element.
-//$body-bg:       $white !default;
-//$body-color:    $gray-900 !default;
+$body-bg: $gray-100;
+$body-color: theme-color('main');
 //
 /****** Links ******/
 
@@ -189,9 +190,9 @@ $grid-breakpoints: (
 //$line-height-lg:         1.5 !default;
 //$line-height-sm:         1.5 !default;
 //$border-width: 1px !default;
-//$border-radius:          .25rem !default;
-//$border-radius-lg:       .3rem !default;
-//$border-radius-sm:       .2rem !default;
+$border-radius: .25rem !default;
+$border-radius-lg: .3rem !default;
+$border-radius-sm: .2rem !default;
 //$component-active-color: $white !default;
 //$component-active-bg:    theme-color("primary") !default;
 //$caret-width:            .3em !default;
@@ -207,17 +208,23 @@ $font-family-sans-serif: 'Raleway',
 "Helvetica Neue",
 Arial,
 sans-serif;
+$font-family-headings: 'Raleway',
+"Helvetica Neue",
+Arial,
+sans-serif;
 //$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: 'Open Sans',
 Arial,
 sans-serif;
 
 //$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
-//$font-size-lg:   1.25rem !default;
-//$font-size-sm:   .875rem !default;
-//$font-weight-normal: normal !default;
-//$font-weight-bold: bold !default;
-//$font-weight-base: $font-weight-normal !default;
+//$font-size-lg:   1.25rem !default; //20px
+//$font-size-sm:   .875rem !default; // 14px
+$font-size-xs: .75rem; // 12px
+$font-weight-light: lighter;
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+$font-weight-base: $font-weight-normal;
 //$line-height-base: 1.5 !default;
 //
 //$h1-font-size: 2.5rem !default;
@@ -227,11 +234,17 @@ sans-serif;
 //$h5-font-size: 1.25rem !default;
 //$h6-font-size: 1rem !default;
 //
+$h3-margin-top: 2.5rem;
+$h5-margin-top: inherit;
+//
+$headings-text-case: uppercase;
+//
 //$headings-margin-bottom: ($spacer / 2) !default;
-//$headings-font-family : inherit !default;
-//$headings-font-weight : 500 !default;
+$headings-font-family: $font-family-headings;
+$headings-font-weight: $font-weight-bold;
 //$headings-line-height : 1.1 !default;
-//$headings-color       : inherit !default;
+$headings-color: theme-color('primary');
+$headings-secondary-color: theme-color('main');
 //
 //$display1-size: 6rem !default;
 //$display2-size: 5.5rem !default;
@@ -293,7 +306,7 @@ sans-serif;
 //$input-btn-padding-y-lg:    .5rem !default;
 //$input-btn-padding-x-lg:    1rem !default;
 //$input-btn-line-height-lg:  1.5 !default;
-//$btn-font-weight:                $font-weight-normal !default;
+$btn-font-weight: $font-weight-bold;
 //$btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba($black,.075) !default;
 //$btn-focus-box-shadow:           0 0 0 3px rgba(theme-color("primary"), .25) !default;
 //$btn-active-box-shadow:          inset 0 3px 5px rgba($black,.125) !default;
@@ -532,7 +545,7 @@ sans-serif;
 //$card-spacer-y : .75rem !default;
 //$card-spacer-x : 1.25rem !default;
 //$card-border-width : 1px !default;
-//$card-border-radius : $border-radius !default;
+$card-border-radius: $border-radius !important;
 //$card-border-color : rgba($black, .125) !default;
 //$card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) !default;
 //$card-cap-bg : rgba($black, .03) !default;
@@ -543,7 +556,7 @@ sans-serif;
 //$card-deck-margin : ($grid-gutter-width / 2) !default;
 //
 //$card-columns-count : 3 !default;
-//$card-columns-gap : 1.25rem !default;
+$card-columns-gap: 1.25rem;
 //$card-columns-margin : $card-spacer-y !default;
 //
 //

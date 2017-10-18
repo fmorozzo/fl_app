@@ -10,13 +10,131 @@
 
     <title>Facility Lockers</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:300,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:light,normal,bold|Raleway:light,normal,bold" rel="stylesheet">
     <!-- Bootstrap core CSS -->
-    <link href="css/mdb.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
 
 </head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/svg/logo/horizontal/white.svg" alt="Facility Lockers logo" class="fl-brand-logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse align-self-end" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto pr-5">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">How it works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+            <!-- Example split danger button -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary btn-outline-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> My Account
+  </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <button class="dropdown-item" type="button">Action</button>
+                    <button class="dropdown-item" type="button">Another action</button>
+                    <button class="dropdown-item" type="button">Something else here</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<section class="fl-section fl-panel">
+    <div class="container">
+        <h3 class="fl-panel-title">Notifications</h3>
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ready for pickup</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                            <button href="#" class="btn btn-primary">drop off</button>
+                        </div>
+                        <div class="col-6">
+                            <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                            <button href="#" class="btn btn-secondary">pick up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Profile</h5>
+                    <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="card-text">Complete your profile to get more points.</p>
+                            <button class="btn btn-primary">profile</button>
+                        </div>
+                        <div class="col-6">
+                            <figure class="chart-one animate">
+                                <svg role="img" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="circle-background"/>
+                            <circle class="circle-foreground" fill="url('#linearGradient-1')"/>
+                            <defs>
+                                <linearGradient x1="9.5612282%" y1="63.4538517%" x2="42.2374637%" y2="100%" id="linearGradient-1">
+                                    <stop stop-color="#003A6F" offset="0%"></stop>
+                                    <stop stop-color="#7ED6D6" offset="100%"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                                <figcaption></figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Points</h5>
+                    <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="card-text">You get points each time you use or share the app.
+                            </p>
+                            <button class="btn btn-primary">profile</button>
+                        </div>
+                        <div class="col-6">
+                            <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Profile</h5>
+                    <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="card-text">Complete your profile to get more points.</p>
+                            <button class="btn btn-primary">profile</button>
+                        </div>
+                        <div class="col-6">
+                            <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <body>
     <!-- Bootstrap core JavaScript
@@ -25,7 +143,6 @@
     <script src="js/vendor/jquery-3.2.1.min.js"></script>
     <script src="js/vendor/popper.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/vendor/mdb.min.js"></script>
     <script src="js/fl/scroll.js"></script>
 </body>
 

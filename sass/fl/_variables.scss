@@ -64,7 +64,9 @@ $grays: ( 100: $gray-100,
 $blue: #003A6F; // FL
 $squirel: #FF595A; // FL
 $indigo: #6610f2 !default;
-$turquoise: #7ED6D6; //FL
+//$turquoise: #7ED6D6; //FL
+$turquoise: #00C2C2;
+$turquoiseOfficial: #C7E8E8;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
 $red: #dc3545 !default;
@@ -93,6 +95,7 @@ gray-dark: $gray-800);
 $theme-colors: ( main:$blue,
 primary: $squirel,
 secondary: $turquoise,
+secondaryLight: $turquoiseOfficial,
 success: $green,
 info: $cyan,
 warning: $yellow,

@@ -1,12 +1,21 @@
 $configs: ( chart-one: ( svgSize: 100px,
 percentage: 75,
 strokeWidth: 10px,
-backgroundColor: #fff,
+backgroundColor: theme-color('secondaryLight'),
 foregroundColor: url(#linearGradient-1),
 labelColor: theme-color('main'),
 labelFontSize: 1rem,
 duration: 2s,
-animationDelay: .5s));
+animationDelay: .5s),
+chart-mini: ( svgSize: 80px,
+percentage: 20,
+strokeWidth: 8px,
+backgroundColor: theme-color('secondaryLight'),
+foregroundColor: url(#linearGradient-1),
+labelColor: theme-color('main'),
+labelFontSize: 1rem,
+duration: 2s,
+animationDelay: .5s),);
 
 
 /* ------- DO NOT EDIT BELOW --------- */
@@ -72,7 +81,7 @@ $param in $configs {
             top: calc(50% - #{map-get($param, labelFontSize)/2});
             left: 0;
             font-size: 0;
-            font-weight: $font-weight-bold;
+            font-weight: bold;
 
 
             &:after {

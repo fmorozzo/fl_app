@@ -51,7 +51,7 @@ H2 -> 38px
             font-weight: $font-weight-light;
         }
     }
-    .btn.dropdown-toggle:hover{
+    .btn.dropdown-toggle:hover {
         color: theme-color('main');
     }
 }
@@ -88,6 +88,7 @@ H2 -> 38px
             margin: 0 1rem 1rem 0;
             border: 1px solid theme-color('borders');
             border-radius: 3px;
+            transition: all .5s ease;
             .card-title {
                 position: relative;
                 margin-top: .625rem;
@@ -125,7 +126,7 @@ H2 -> 38px
                     font-size: 4rem;
                     line-height: 1;
                     margin-right: -15px;
-                    small{
+                    small {
                         font-size: 1.75rem;
                         font-weight: $font-weight-bold;
                     }
@@ -136,22 +137,22 @@ H2 -> 38px
                 width: 100%;
                 flex: none;
                 min-width: inherit;
-                max-width:inherit;
+                max-width: inherit;
                 flex-direction: row;
                 .card-body {
-                        flex: 0 0 25%;
-                        max-width: 25%;
+                    flex: 0 0 25%;
+                    max-width: 25%;
                 }
                 .card-expanded {
                     display: block;
                     flex: 0 0 75%;
                     max-width: 75%;
                     padding: 1.25rem;
-                    background-color: rgba(theme-color('main'),.08);
-                    .btn{
+                    background-color: rgba(theme-color('main'), .08);
+                    .btn {
                         width: 100%;
                     }
-                    p{
+                    p {
                         font-size: $font-size-xs;
                         margin-top: 1rem;
                     }
@@ -164,6 +165,7 @@ H2 -> 38px
 
     }
 }
+
 .icon-view {
     background: url(../img/svg/icon/eye.svg) no-repeat left top;
     width: 20px;
@@ -173,12 +175,15 @@ H2 -> 38px
     margin-top: .3rem;
     cursor: pointer;
 }
+
 .icon-view.hide {
     background-position: right top;
 }
+
 .icon-view:hover {
     background-position: left bottom;
 }
+
 .icon-view.hide:hover {
     background-position: right bottom;
 }

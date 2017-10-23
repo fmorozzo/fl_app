@@ -149,12 +149,38 @@ H2 -> 38px
                     max-width: 75%;
                     padding: 1.25rem;
                     background-color: rgba(theme-color('main'), .08);
-                    .btn {
-                        width: 100%;
-                    }
+                    color: rgba(theme-color('main'), .5);
                     p {
                         font-size: $font-size-xs;
                         margin-top: 1rem;
+                        color: rgba(theme-color('main'), .5);
+                    }
+
+                    .fl-icon-status {
+                        margin-top: 1rem;
+                        * {
+                            fill: rgba(theme-color('main'), .3);
+                        }
+                    }
+                    .fl-status-title {
+                        font-size: $font-size-base;
+                        font-weight: $font-weight-bold;
+                        margin-top: .25rem;
+                        color: rgba(theme-color('main'), .3);
+                    }
+                    .fl-status-done {
+                        p {
+                            color: theme-color('main');
+                        }
+                        .fl-status-title {
+                            font-size: $font-size-base;
+                            color: theme-color('secondary');
+                        }
+                        .fl-icon-status {
+                            * {
+                                fill: theme-color('secondary');
+                            }
+                        }
                     }
                 }
             }
@@ -167,7 +193,7 @@ H2 -> 38px
 }
 
 .icon-view {
-    background: url(../img/svg/icon/eye.svg) no-repeat left top;
+    background: url(../img/svg/icon/eye.svg) no-repeat right top;
     width: 20px;
     height: 14px;
     display: inline-block;
@@ -177,13 +203,79 @@ H2 -> 38px
 }
 
 .icon-view.hide {
-    background-position: right top;
+    background-position: left top;
 }
 
 .icon-view:hover {
-    background-position: left bottom;
+    background-position: right bottom;
 }
 
 .icon-view.hide:hover {
-    background-position: right bottom;
+    background-position: left bottom;
+}
+
+
+
+/******* table *******/
+
+.table-bordered {
+    border: 1px solid rgba(theme-color('main'), 1);
+    font-size: $font-size-sm;
+}
+
+.fl-table-action {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: no-repeat url(../img/svg/icon/action/action_sprite.svg) left top;
+    margin-right: .35rem;
+}
+
+.fl-action-details {
+    background-position: left top;
+}
+
+.fl-action-edit {
+    background-position: center top;
+}
+
+.fl-action-remove {
+    background-position: right top;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    //  background-color: rgba(theme-color('secondary'), .1)
+}
+
+/******* SVG *******/
+
+.fl-icon-status {
+
+    .fl-svg-check {
+        animation-name: myAnimation;
+        animation-duration: .3s;
+        animation-timing-function: ease-in-out;
+        transform-origin: center center;
+        transform: scale(0);
+    }
+}
+
+.fl-status-done {
+
+    .fl-icon-status {
+
+        .fl-svg-check {
+
+            transform: scale(1);
+        }
+    }
+}
+
+@keyframes myAnimation {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }

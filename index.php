@@ -131,36 +131,6 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Profile</h5>
-                    <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
-                    <div class="row">
-                        <div class="col-6">
-                            <p class="card-text">Complete your profile to get more points.</p>
-                            <button class="btn btn-primary btn-sm">profile</button>
-                        </div>
-                        <div class="col-6">
-                            <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Profile</h5>
-                    <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
-                    <div class="row">
-                        <div class="col-6">
-                            <p class="card-text">Complete your profile to get more points.</p>
-                            <button class="btn btn-primary btn-sm">profile</button>
-                        </div>
-                        <div class="col-6">
-                            <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </div>
@@ -170,9 +140,9 @@
     <div class="container">
         <h4 class="fl-panel-title">Ongoing processes</h4>
         <div class="card-group">
-            <div class="card expanded">
+            <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">washio<small> / booked</small><i class="icon-view"></i></h5>
+                    <h5 class="card-title">washio<small> / dropped</small><i class="icon-view"></i></h5>
                     <div class="row">
                         <div class="col-6">
                             <label>Order :</label>
@@ -205,38 +175,44 @@
                 <div class="card-expanded">
                     <h5 class="card-title">Your order status</h5>
                     <div class="row text-center">
-                        <div class="col-3">
-                            <svg class="fl-icon-status" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><title>icon/booked</title><g fill="#00C2C2" fill-rule="evenodd"><path d="M32 4c1.657 0 3 1.343 3 3v25c0 1.657-1.343 3-3 3H4c-1.657 0-3-1.343-3-3V7c0-1.657 1.343-3 3-3l3 2c0 .552-.448 1-1 1H5c-.552 0-1-.448-1-1V4h3V2c0-.552-.448-1-1-1H5c-.552 0-1 .448-1 1v2h5V2c0-.552.448-1 1-1h1c.552 0 1 .448 1 1v2h2V2c0-.552.448-1 1-1h1c.552 0 1 .448 1 1v2h2V2c0-.552.448-1 1-1h1c.552 0 1 .448 1 1v2h2V2c0-.552.448-1 1-1h1c.552 0 1 .448 1 1v2h2V2c0-.552.448-1 1-1h1c.552 0 1 .448 1 1v2zM4 4zm1 7c-1.105 0-2 .895-2 2v18c0 1.105.895 2 2 2h26c1.105 0 2-.895 2-2V13c0-1.105-.895-2-2-2H5zm7-7H9v2c0 .552.448 1 1 1h1c.552 0 1-.448 1-1V4zm2 0v2c0 .552.448 1 1 1h1c.552 0 1-.448 1-1V4h-3zm8 0h-3v2c0 .552.448 1 1 1h1c.552 0 1-.448 1-1V4zm2 0v2c0 .552.448 1 1 1h1c.552 0 1-.448 1-1V4h-3zm8 0h-3v2c0 .552.448 1 1 1h1c.552 0 1-.448 1-1V4z"/><path class="svg-check" d="M30 17l-3-3-11 11-6-6-3 3 9 9"/></g></svg>
-
-                            <p class="fl-status">booked</p>
+                        <div class="col-3 fl-status-done">
+                            <?php include 'includes/svg/icon/booked.svg' ?>
+                            <p class="fl-status-title">booked</p>
                             <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
                         </div>
-                        <div class="col-3 ">
-                            <img src="img/svg/icon/dropped.svg" alt="" class="fl-icon-status">
-                            <p class="fl-status">dropped</p>
-                            <p class="text-muted">Drop your clothes in the locker.</p>
+                        <div class="col-3 fl-status-done">
+                            <?php include 'includes/svg/icon/dropped.svg' ?>
+                            <p class="fl-status-title">dropped</p>
+                            <p>Drop your clothes in the locker.</p>
                         </div>
                         <div class="col-3">
-                            <img src="img/svg/icon/reviewed.svg" alt="" class="fl-icon-status">
-                            <p class="fl-status">reviewed</p>
-                            <p class="text-muted">washio will review your order and send you a text message with a link to approve the final amount.</p>
+
+                            <?php include 'includes/svg/icon/review.svg' ?>
+
+                            <p class="fl-status-title">review</p>
+                            <p>washio will review your order and send you a text message with a link to approve the final amount.</p>
                         </div>
+                        <!--
                         <div class="col-3">
-                            <img src="img/svg/icon/paid.svg" alt="" class="fl-icon-status">
-                            <p class="fl-status">paid</p>
-                            <p class="text-muted">At that stage you will need to pay through the Falicity Lockers platform.</p>
-                        </div>
+
+                            <?php include 'includes/svg/icon/payment.svg' ?>
+
+                            <p class="fl-status-title">payment</p>
+                            <p>At that stage you will need to pay through the Falicity Lockers platform.</p>
+                        </div>-->
                         <div class="col-3">
-                            <img src="img/svg/icon/delivered.svg" alt="" class="fl-icon-status">
-                            <p class="fl-status">delivered</p>
-                            <p class="text-muted">You will receive a message once your clothes are ready for pickup.</p>
+
+                            <?php include 'includes/svg/icon/delivery.svg' ?>
+
+                            <p class="fl-status-title">delivery</p>
+                            <p>You will receive a message once your clothes are ready for pickup.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">returns<small> / booked</small><i class="icon-view hide"></i></h5>
+                    <h5 class="card-title">returns<small> / booked</small><i class="icon-view"></i></h5>
                     <p class="card-main-message">You have booked a locker to return an item.</p>
                     <div class="row">
                         <div class="col-6">
@@ -253,10 +229,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="card-expanded">
+                    <h5 class="card-title">Your order status</h5>
+                    <div class="row text-center">
+                        <div class="col-3 fl-status-done">
+                            <?php include 'includes/svg/icon/booked.svg' ?>
+                            <p class="fl-status-title">booked</p>
+                            <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">DPD<small> / pickup ready</small><i class="icon-view hide"></i></h5>
+                    <h5 class="card-title">DPD<small> / pickup ready</small><i class="icon-view"></i></h5>
                     <p class="card-main-message">You have one item waiting for you!</p>
                     <div class="row">
                         <div class="col-6">
@@ -271,9 +257,128 @@
                         </div>
                     </div>
                 </div>
+                <div class="card-expanded">
+                    <h5 class="card-title">Your order status</h5>
+                    <div class="row text-center">
+                        <div class="col-3 fl-status-done">
+                            <?php include 'includes/svg/icon/booked.svg' ?>
+                            <p class="fl-status-title">booked</p>
+                            <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
+    </div>
+</section>
+
+<section class="fl-section fl-panel">
+    <div class="container">
+        <h4 class="fl-panel-title">List of activities</h4>
+
+        <table class="table table-hover table-striped table-sm table-bordered table-centered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">order ID</th>
+                    <th scope="col">Service</th>
+                    <th scope="col">locker</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">info</th>
+                    <th scope="col">dropoff</th>
+                    <th scope="col">pickup</th>
+                    <th scope="col">status</th>
+                    <th scope="col">actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>1242376</td>
+                    <td>washio</td>
+                    <td>4</td>
+                    <td>Tour Madou</td>
+                    <td>Pair of Trousers</td>
+                    <td>22/12/16</td>
+                    <td>27/12/16</td>
+                    <td>locker ready</td>
+                    <td><a href="#" class="fl-table-action fl-action-details"></a><a href="#" class="fl-table-action fl-action-edit"></a><a href="#" class="fl-table-action fl-action-remove"></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1242376</td>
+                    <td>washio</td>
+                    <td>4</td>
+                    <td>Tour Madou</td>
+                    <td>Pair of Trousers</td>
+                    <td>22/12/16</td>
+                    <td>27/12/16</td>
+                    <td>locker ready</td>
+                    <td><a href="#" class="fl-table-action fl-action-details"></a><a href="#" class="fl-table-action fl-action-edit"></a><a href="#" class="fl-table-action fl-action-remove"></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1242376</td>
+                    <td>washio</td>
+                    <td>4</td>
+                    <td>Tour Madou</td>
+                    <td>Pair of Trousers</td>
+                    <td>22/12/16</td>
+                    <td>27/12/16</td>
+                    <td>locker ready</td>
+                    <td><a href="#" class="fl-table-action fl-action-details"></a><a href="#" class="fl-table-action fl-action-edit"></a><a href="#" class="fl-table-action fl-action-remove"></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1242376</td>
+                    <td>washio</td>
+                    <td>4</td>
+                    <td>Tour Madou</td>
+                    <td>Pair of Trousers</td>
+                    <td>22/12/16</td>
+                    <td>27/12/16</td>
+                    <td>locker ready</td>
+                    <td><a href="#" class="fl-table-action fl-action-details"></a><a href="#" class="fl-table-action fl-action-edit"></a><a href="#" class="fl-table-action fl-action-remove"></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1242376</td>
+                    <td>washio</td>
+                    <td>4</td>
+                    <td>Tour Madou</td>
+                    <td>Pair of Trousers</td>
+                    <td>22/12/16</td>
+                    <td>27/12/16</td>
+                    <td>locker ready</td>
+                    <td><a href="#" class="fl-table-action fl-action-details"></a><a href="#" class="fl-table-action fl-action-edit"></a><a href="#" class="fl-table-action fl-action-remove"></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1242376</td>
+                    <td>washio</td>
+                    <td>4</td>
+                    <td>Tour Madou</td>
+                    <td>Pair of Trousers</td>
+                    <td>22/12/16</td>
+                    <td>27/12/16</td>
+                    <td>locker ready</td>
+                    <td><a href="#" class="fl-table-action fl-action-details"></a><a href="#" class="fl-table-action fl-action-edit"></a><a href="#" class="fl-table-action fl-action-remove"></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1242376</td>
+                    <td>washio</td>
+                    <td>4</td>
+                    <td>Tour Madou</td>
+                    <td>Pair of Trousers</td>
+                    <td>22/12/16</td>
+                    <td>27/12/16</td>
+                    <td>locker ready</td>
+                    <td><a href="#" class="fl-table-action fl-action-details"></a><a href="#" class="fl-table-action fl-action-edit"></a><a href="#" class="fl-table-action fl-action-remove"></a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </section>
 

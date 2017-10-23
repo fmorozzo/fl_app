@@ -1065,12 +1065,12 @@ pre {
   .table td {
     padding: 0.75rem;
     vertical-align: top;
-    border-top: 1px solid #e9ecef; }
+    border-top: 1px solid rgba(0, 58, 111, 0.3); }
   .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #e9ecef; }
+    border-bottom: 2px solid rgba(0, 58, 111, 0.3); }
   .table tbody + tbody {
-    border-top: 2px solid #e9ecef; }
+    border-top: 2px solid rgba(0, 58, 111, 0.3); }
   .table .table {
     background-color: #f5f5f5; }
 
@@ -1079,19 +1079,19 @@ pre {
   padding: 0.3rem; }
 
 .table-bordered {
-  border: 1px solid #e9ecef; }
+  border: 1px solid rgba(0, 58, 111, 0.3); }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #e9ecef; }
+    border: 1px solid rgba(0, 58, 111, 0.3); }
   .table-bordered thead th,
   .table-bordered thead td {
     border-bottom-width: 2px; }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05); }
+  background-color: rgba(0, 194, 194, 0.1); }
 
 .table-hover tbody tr:hover {
-  background-color: rgba(0, 0, 0, 0.075); }
+  background-color: rgba(0, 194, 194, 0.3); }
 
 .table-main,
 .table-main > th,
@@ -6689,17 +6689,33 @@ H2 -> 38px
           flex: 0 0 75%;
           max-width: 75%;
           padding: 1.25rem;
-          background-color: rgba(0, 58, 111, 0.08); }
-          .fl-panel .container .card.expanded .card-expanded .btn {
-            width: 100%; }
+          background-color: rgba(0, 58, 111, 0.08);
+          color: rgba(0, 58, 111, 0.5); }
           .fl-panel .container .card.expanded .card-expanded p {
             font-size: 0.75rem;
+            margin-top: 1rem;
+            color: rgba(0, 58, 111, 0.5); }
+          .fl-panel .container .card.expanded .card-expanded .fl-icon-status {
             margin-top: 1rem; }
+            .fl-panel .container .card.expanded .card-expanded .fl-icon-status * {
+              fill: rgba(0, 58, 111, 0.3); }
+          .fl-panel .container .card.expanded .card-expanded .fl-status-title {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: .25rem;
+            color: rgba(0, 58, 111, 0.3); }
+          .fl-panel .container .card.expanded .card-expanded .fl-status-done p {
+            color: #003A6F; }
+          .fl-panel .container .card.expanded .card-expanded .fl-status-done .fl-status-title {
+            font-size: 1rem;
+            color: #00C2C2; }
+          .fl-panel .container .card.expanded .card-expanded .fl-status-done .fl-icon-status * {
+            fill: #00C2C2; }
       .fl-panel .container .card .card-expanded {
         display: none; }
 
 .icon-view {
-  background: url(../img/svg/icon/eye.svg) no-repeat left top;
+  background: url(../img/svg/icon/eye.svg) no-repeat right top;
   width: 20px;
   height: 14px;
   display: inline-block;
@@ -6708,14 +6724,51 @@ H2 -> 38px
   cursor: pointer; }
 
 .icon-view.hide {
-  background-position: right top; }
+  background-position: left top; }
 
 .icon-view:hover {
-  background-position: left bottom; }
-
-.icon-view.hide:hover {
   background-position: right bottom; }
 
+.icon-view.hide:hover {
+  background-position: left bottom; }
+
+/******* table *******/
+.table-bordered {
+  border: 1px solid #003a6f;
+  font-size: 0.875rem; }
+
+.fl-table-action {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: no-repeat url(../img/svg/icon/action/action_sprite.svg) left top;
+  margin-right: .35rem; }
+
+.fl-action-details {
+  background-position: left top; }
+
+.fl-action-edit {
+  background-position: center top; }
+
+.fl-action-remove {
+  background-position: right top; }
+
+/******* SVG *******/
+.fl-icon-status .fl-svg-check {
+  animation-name: myAnimation;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+  transform-origin: center center;
+  transform: scale(0); }
+
+.fl-status-done .fl-icon-status .fl-svg-check {
+  transform: scale(1); }
+
+@keyframes myAnimation {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
 h1,
 h2,
 h3,
@@ -6822,7 +6875,7 @@ h6,
     animation: offset 2s ease-in-out forwards;
     animation-delay: 0.5s; }
   .chart-mini.animate figcaption:after {
-    animation: chart-mini-label 2s steps(20) forwards;
+    animation: chart-mini-label 2s steps(50) forwards;
     animation-delay: 0.5s; }
   .chart-mini svg {
     width: 100%;
@@ -6836,8 +6889,8 @@ h6,
       stroke-width: 8px; }
     .chart-mini svg .circle-foreground {
       stroke: url(#linearGradient-1);
-      stroke-dasharray: 45.216px 226.08px;
-      stroke-dashoffset: 45.216px;
+      stroke-dasharray: 113.04px 226.08px;
+      stroke-dashoffset: 113.04px;
       stroke-linecap: round;
       transform-origin: 50% 50%;
       transform: rotate(-90deg); }
@@ -6863,7 +6916,7 @@ h6,
 
 @keyframes chart-mini-label {
   100% {
-    transform: translateY(-20rem); } }
+    transform: translateY(-50rem); } }
 @keyframes offset {
   100% {
     stroke-dashoffset: 0; } }

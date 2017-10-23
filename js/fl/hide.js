@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('.icon-view').click(function(){
-        $(this).parents('.card').toggleClass('expanded');
+    $('.icon-view').click(function () {
+        $(this).toggleClass('hide').parents('.card').toggleClass('expanded');
+
     })
 });

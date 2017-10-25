@@ -16,7 +16,7 @@
     <link href="css/app.css" rel="stylesheet">
 
 </head>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="fl-primary-nav navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="#"><img src="img/svg/logo/horizontal/white.svg" alt="Facility Lockers logo" class="fl-brand-logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -381,6 +381,37 @@
         </table>
     </div>
 </section>
+<div class="fixed-bottom">
+
+    <nav class="fl-quick-access-nav navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <span class="fl-nav-title">Quick Access to my services</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+            <div class="collapse navbar-collapse align-self-end" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <button class="nav-link fl-btn-qa-drycleaning" href="#">Dry Cleaning</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link fl-btn-qa-ironing" href="#">Ironing</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link fl-btn-qa-itrepair" href="#">IT Repair</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link fl-btn-qa-sewing" href="#">Sewing</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link fl-btn-qa-shoerepair" href="#">Shoe Repair</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
 
 <body>
     <!-- Bootstrap core JavaScript

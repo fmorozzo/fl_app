@@ -6583,13 +6583,13 @@ body, p -> 16px
 H2 -> 38px
 */
 /******* navbar ******/
-.navbar {
+.fl-primary-nav {
   font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
   font-weight: normal; }
-  .navbar .nav-item {
+  .fl-primary-nav .nav-item {
     position: relative;
     z-index: 1; }
-    .navbar .nav-item.active:before, .navbar .nav-item:hover:before {
+    .fl-primary-nav .nav-item.active:before, .fl-primary-nav .nav-item:hover:before {
       position: absolute;
       top: -10px;
       right: 0;
@@ -6598,18 +6598,18 @@ H2 -> 38px
       content: "";
       background: url(../img/svg/icon/tail/red.svg) no-repeat;
       z-index: 0; }
-    .navbar .nav-item:hover:before {
+    .fl-primary-nav .nav-item:hover:before {
       opacity: .3; }
-    .navbar .nav-item.active:hover:before {
+    .fl-primary-nav .nav-item.active:hover:before {
       opacity: 1; }
-    .navbar .nav-item.active .nav-link, .navbar .nav-item.active .nav-link:hover {
+    .fl-primary-nav .nav-item.active .nav-link, .fl-primary-nav .nav-item.active .nav-link:hover {
       font-weight: bold; }
-    .navbar .nav-item .nav-link,
-    .navbar .nav-item .nav-link:hover {
+    .fl-primary-nav .nav-item .nav-link,
+    .fl-primary-nav .nav-item .nav-link:hover {
       position: relative;
       color: #fff;
       font-weight: lighter; }
-  .navbar .btn.dropdown-toggle:hover {
+  .fl-primary-nav .btn.dropdown-toggle:hover {
     color: #003A6F; }
 
 /******* section-panel *******/
@@ -6736,12 +6736,16 @@ H2 -> 38px
 .table-bordered {
   border: 1px solid #003a6f;
   font-size: 0.875rem; }
+  .table-bordered td,
+  .table-bordered th {
+    vertical-align: middle;
+    text-align: center; }
 
 .fl-table-action {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  background: no-repeat url(../img/svg/icon/action/action_sprite.svg) left top;
+  width: 24px;
+  height: 24px;
+  background: no-repeat url(../img/svg/icon/action/action_sprite_24.svg) left top;
   margin-right: .35rem; }
 
 .fl-action-details {
@@ -6752,6 +6756,51 @@ H2 -> 38px
 
 .fl-action-remove {
   background-position: right top; }
+
+.fl-table-action:hover {
+  background-position-y: bottom; }
+
+/******* BOTTOM FIXED BAR *******/
+.fl-quick-access-nav {
+  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2); }
+  .fl-quick-access-nav .fl-nav-title {
+    color: #003A6F;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
+    white-space: nowrap; }
+  .fl-quick-access-nav .nav-item .nav-link {
+    padding-left: 40px;
+    position: relative;
+    background-image: linear-gradient(-153deg, rgba(126, 214, 214, 0.8) 5%, #7ED6D6 100%);
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    margin: 0 0 0 1rem;
+    cursor: pointer; }
+    .fl-quick-access-nav .nav-item .nav-link:hover {
+      color: #fff;
+      background-image: linear-gradient(153deg, rgba(0, 194, 194, 0.8) 5%, #00C2C2 100%); }
+    .fl-quick-access-nav .nav-item .nav-link:before {
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      background-position: 4px 4px;
+      background-repeat: no-repeat; }
+    .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-drycleaning:before {
+      background-image: url(../img/svg/icon/dry_cleaning.svg); }
+    .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-ironing:before {
+      background-image: url(../img/svg/icon/ironing.svg); }
+    .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-itrepair:before {
+      background-image: url(../img/svg/icon/it_repair.svg); }
+    .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-sewing:before {
+      background-image: url(../img/svg/icon/sewing.svg); }
+    .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-shoerepair:before {
+      background-image: url(../img/svg/icon/shoe_repair.svg); }
 
 /******* SVG *******/
 .fl-icon-status .fl-svg-check {

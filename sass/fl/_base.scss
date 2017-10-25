@@ -348,8 +348,8 @@ H2 -> 38px
 
     .fl-svg-check {
         animation-name: myAnimation;
-        animation-duration: .3s;
-        animation-timing-function: ease-in-out;
+        animation-duration: .4s;
+        animation-timing-function: cubic-bezier(0.28, 0.92, 0.86, 1.23);
         transform-origin: center center;
         transform: scale(0);
     }
@@ -372,5 +372,15 @@ H2 -> 38px
     }
     to {
         transform: scale(1);
+    }
+}
+
+
+
+/******* media queries fixtures *******/
+
+@include media-breakpoint-up(md) {
+    .fl-panel .container .card .card-body .fl-card-price {
+        font-size: 3rem;
     }
 }

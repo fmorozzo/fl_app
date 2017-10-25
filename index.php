@@ -14,14 +14,6 @@
     <!-- Bootstrap core CSS -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
-    <script>
-        $('.view-modal-1').click(function() {
-            $('.modal').modal('show');
-            alert('f');
-        });
-
-    </script>
-
 </head>
 <nav class="fl-primary-nav navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
@@ -65,24 +57,7 @@
     <div class="container">
         <h4 class="fl-panel-title">Notifications</h4>
         <div class="row">
-            <div class="col-12 col-sm-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Ready for pickup</h5>
-                        <div class="row text-center">
-                            <div class="col-6">
-                                <img class="fl-icon-circle" src="img/svg/icon/pickup_circle.svg" alt="pickup" />
-                                <button href="#" class="btn btn-primary btn-sm">drop off</button>
-                            </div>
-                            <div class="col-6">
-                                <img class="fl-icon-circle" src="img/svg/icon/pickup_circle.svg" alt="pickup" />
-                                <button href="#" class="btn btn-secondary btn-sm">pick up</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Profile</h5>
@@ -110,14 +85,42 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Profile</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="card-text">Complete your profile to get more points.</p>
+                                <button class="btn btn-primary btn-sm">profile</button>
+                            </div>
+                            <div class="col-6">
+                                <figure class="chart-one animate">
+                                    <svg role="img" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="circle-background"/>
+                                    <circle class="circle-foreground" fill="url('#linearGradient-1')"/>
+                                    <defs>
+                                        <linearGradient x1="9.5612282%" y1="63.4538517%" x2="42.2374637%" y2="100%" id="linearGradient-1">
+                                            <stop stop-color="#003A6F" offset="0%"></stop>
+                                            <stop stop-color="#00C2C2" offset="100%"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                    <figcaption></figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Points</h5>
                         <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
                         <div class="row">
                             <div class="col-6">
-                                <p class="card-text">You get points each time you use or share the app.
+                                <p class="card-text">You get points each time you use the app.
                                 </p>
                                 <button class="btn btn-primary btn-sm">profile</button>
                             </div>
@@ -128,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Profile</h5>
@@ -149,25 +152,7 @@
         </div>
         <div class="row">
 
-            <div class="col-12 col-sm-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Ready for pickup</h5>
-                        <div class="row text-center">
-                            <div class="col-6">
-                                <img class="fl-icon-circle" src="img/svg/icon/pickup_circle.svg" alt="pickup" />
-                                <button href="#" class="btn btn-primary btn-sm">drop off</button>
-                            </div>
-                            <div class="col-6">
-                                <img class="fl-icon-circle" src="img/svg/icon/pickup_circle.svg" alt="pickup" />
-                                <button href="#" class="btn btn-secondary btn-sm">pick up</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Profile</h5>
@@ -197,14 +182,14 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Points</h5>
                         <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
                         <div class="row">
                             <div class="col-6">
-                                <p class="card-text">You get points each time you use or share the app.
+                                <p class="card-text">Get points each time you share the app.
                                 </p>
                                 <button class="btn btn-primary btn-sm">profile</button>
                             </div>
@@ -227,7 +212,7 @@
 
         <div class="row">
 
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">washio<small> / dropped</small><i class="icon-view"></i></h5>
@@ -300,7 +285,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">returns<small> / booked</small><i class="icon-view"></i></h5>
@@ -333,7 +318,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">DPD<small> / pickup ready</small><i class="icon-view"></i></h5>
@@ -372,7 +357,7 @@
     <div class="container">
         <h4 class="fl-panel-title">List of activities</h4>
 
-        <table class="table table-hover table-striped table-sm table-bordered table-centered">
+        <table class="table table-hover table-striped table-sm table-responsive table-bordered table-centered">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -480,7 +465,7 @@
 
     <nav class="fl-quick-access-nav navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <span class="fl-nav-title">Quick Access to my services</span>
+            <span class="fl-nav-title">Quick Access <br>to my services</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -515,6 +500,7 @@
     <script src="js/vendor/jquery-3.2.1.min.js"></script>
     <script src="js/vendor/popper.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/fl/jquery.alterclass.js"></script>
     <script src="js/fl/hide.js"></script>
 </body>
 

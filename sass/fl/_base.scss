@@ -82,10 +82,16 @@ H2 -> 38px
                 width: 125px;
             }
         }
+        .row {}
         .card {
-            min-width: 250px;
+
+            /*min-width: 250px;
             max-width: 250px;
             margin: 0 1rem 1rem 0;
+            height: 200px;
+            max-height: 200px;*/
+            margin-top: 1rem;
+            margin-bottom: 1rem;
             border: 1px solid theme-color('borders');
             border-radius: 3px;
             transition: all .5s ease;
@@ -215,6 +221,35 @@ H2 -> 38px
 }
 
 
+
+/******* notifications section *******/
+
+.fl-section-notifications {
+    .container {
+        .fl-panel-title {
+            &:before {}
+        }
+        .card {
+            height: 200px;
+            max-height: 200px;
+        }
+    }
+}
+
+
+
+/******* processes section *******/
+
+.fl-section-processes {
+    .container {
+        .fl-panel-title {
+            &:before {}
+        }
+        .card {
+            height: 270px;
+        }
+    }
+}
 
 /******* table *******/
 

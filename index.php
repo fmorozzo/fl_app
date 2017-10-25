@@ -14,6 +14,13 @@
     <!-- Bootstrap core CSS -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
+    <script>
+        $('.view-modal-1').click(function() {
+            $('.modal').modal('show');
+            alert('f');
+        });
+
+    </script>
 
 </head>
 <nav class="fl-primary-nav navbar navbar-expand-lg navbar-dark bg-dark">
@@ -54,37 +61,39 @@
         </div>
     </div>
 </nav>
-<section class="fl-section fl-panel">
+<section class="fl-section fl-panel fl-section-notifications">
     <div class="container">
         <h4 class="fl-panel-title">Notifications</h4>
-        <div class="card-group">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Ready for pickup</h5>
-                    <div class="row text-center">
-                        <div class="col-6">
-                            <img class="fl-icon-circle" src="img/svg/icon/pickup_circle.svg" alt="pickup" />
-                            <button href="#" class="btn btn-primary btn-sm">drop off</button>
-                        </div>
-                        <div class="col-6">
-                            <img class="fl-icon-circle" src="img/svg/icon/pickup_circle.svg" alt="pickup" />
-                            <button href="#" class="btn btn-secondary btn-sm">pick up</button>
+        <div class="row">
+            <div class="col-12 col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ready for pickup</h5>
+                        <div class="row text-center">
+                            <div class="col-6">
+                                <img class="fl-icon-circle" src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                                <button href="#" class="btn btn-primary btn-sm">drop off</button>
+                            </div>
+                            <div class="col-6">
+                                <img class="fl-icon-circle" src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                                <button href="#" class="btn btn-secondary btn-sm">pick up</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Profile</h5>
-                    <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
-                    <div class="row">
-                        <div class="col-6">
-                            <p class="card-text">Complete your profile to get more points.</p>
-                            <button class="btn btn-primary btn-sm">profile</button>
-                        </div>
-                        <div class="col-6">
-                            <figure class="chart-one animate">
-                                <svg role="img" xmlns="http://www.w3.org/2000/svg">
+            <div class="col-12 col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Profile</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="card-text">Complete your profile to get more points.</p>
+                                <button class="btn btn-primary btn-sm">profile</button>
+                            </div>
+                            <div class="col-6">
+                                <figure class="chart-one animate">
+                                    <svg role="img" xmlns="http://www.w3.org/2000/svg">
                                     <circle class="circle-background"/>
                                     <circle class="circle-foreground" fill="url('#linearGradient-1')"/>
                                     <defs>
@@ -94,63 +103,83 @@
                                         </linearGradient>
                                     </defs>
                                 </svg>
-                                <figcaption></figcaption>
-                            </figure>
+                                    <figcaption></figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Points</h5>
-                    <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
-                    <div class="row">
-                        <div class="col-6">
-                            <p class="card-text">You get points each time you use or share the app.
-                            </p>
-                            <button class="btn btn-primary btn-sm">profile</button>
-                        </div>
-                        <div class="col-6">
-                            <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+            <div class="col-12 col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Points</h5>
+                        <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="card-text">You get points each time you use or share the app.
+                                </p>
+                                <button class="btn btn-primary btn-sm">profile</button>
+                            </div>
+                            <div class="col-6">
+                                <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Profile</h5>
-                    <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
-                    <div class="row">
-                        <div class="col-6">
-                            <p class="card-text">Complete your profile to get more points.</p>
-                            <button class="btn btn-primary btn-sm">profile</button>
-                        </div>
-                        <div class="col-6">
-                            <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+            <div class="col-12 col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Profile</h5>
+                        <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="card-text">Complete your profile to get more points.</p>
+                                <button class="btn btn-primary btn-sm">profile</button>
+                            </div>
+                            <div class="col-6">
+                                <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
-    </div>
-</section>
+        <div class="row">
 
-<section class="fl-section fl-panel">
-    <div class="container">
-        <h4 class="fl-panel-title">Ongoing processes</h4>
-        <div class="card-group">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">washio<small> / dropped</small><i class="icon-view"></i></h5>
-                    <div class="row">
-                        <div class="col-6">
-                            <label>Order :</label>
-                            <p>5 pieces</p>
-                            <label>Date :</label>
-                            <p>21/11/17</p>
-                            <figure class="chart-mini animate">
-                                <svg role="img" xmlns="http://www.w3.org/2000/svg">
+            <div class="col-12 col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ready for pickup</h5>
+                        <div class="row text-center">
+                            <div class="col-6">
+                                <img class="fl-icon-circle" src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                                <button href="#" class="btn btn-primary btn-sm">drop off</button>
+                            </div>
+                            <div class="col-6">
+                                <img class="fl-icon-circle" src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                                <button href="#" class="btn btn-secondary btn-sm">pick up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Profile</h5>
+                        <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="card-text">Complete your profile to get more points.</p>
+                                <button class="btn btn-primary btn-sm">profile</button>
+                            </div>
+                            <div class="col-6">
+                                <figure class="chart-one animate">
+                                    <svg role="img" xmlns="http://www.w3.org/2000/svg">
                                     <circle class="circle-background"/>
                                     <circle class="circle-foreground" fill="url('#linearGradient-1')"/>
                                     <defs>
@@ -160,39 +189,98 @@
                                         </linearGradient>
                                     </defs>
                                 </svg>
-                                <figcaption></figcaption>
-                            </figure>
-                        </div>
-                        <div class="col-6">
-                            <label>Location :</label>
-                            <p>Espace Bascule</p>
-                            <label>Time :</label>
-                            <p>6-12AM</p>
-                            <span class="fl-card-price">52<small>&euro;</small></span>
+                                    <figcaption></figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="card-expanded">
-                    <h5 class="card-title">Your order status</h5>
-                    <div class="row text-center">
-                        <div class="col-3 fl-status-done">
-                            <?php include 'includes/svg/icon/booked.svg' ?>
-                            <p class="fl-status-title">booked</p>
-                            <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
-                        </div>
-                        <div class="col-3 fl-status-done">
-                            <?php include 'includes/svg/icon/dropped.svg' ?>
-                            <p class="fl-status-title">dropped</p>
-                            <p>Drop your clothes in the locker.</p>
-                        </div>
-                        <div class="col-3">
+            </div>
 
-                            <?php include 'includes/svg/icon/review.svg' ?>
-
-                            <p class="fl-status-title">review</p>
-                            <p>washio will review your order and send you a text message with a link to approve the final amount.</p>
+            <div class="col-12 col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Points</h5>
+                        <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="card-text">You get points each time you use or share the app.
+                                </p>
+                                <button class="btn btn-primary btn-sm">profile</button>
+                            </div>
+                            <div class="col-6">
+                                <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                            </div>
                         </div>
-                        <!--
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<section class="fl-section fl-panel fl-section-processes">
+    <div class="container">
+        <h4 class="fl-panel-title">Ongoing processes</h4>
+
+        <div class="row">
+
+            <div class="col-12 col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">washio<small> / dropped</small><i class="icon-view"></i></h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <label>Order :</label>
+                                <p>5 pieces</p>
+                                <label>Date :</label>
+                                <p>21/11/17</p>
+                                <figure class="chart-mini animate">
+                                    <svg role="img" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="circle-background"/>
+                                    <circle class="circle-foreground" fill="url('#linearGradient-1')"/>
+                                    <defs>
+                                        <linearGradient x1="9.5612282%" y1="63.4538517%" x2="42.2374637%" y2="100%" id="linearGradient-1">
+                                            <stop stop-color="#003A6F" offset="0%"></stop>
+                                            <stop stop-color="#00C2C2" offset="100%"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                    <figcaption></figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-6">
+                                <label>Location :</label>
+                                <p>Espace Bascule</p>
+                                <label>Time :</label>
+                                <p>6-12AM</p>
+                                <span class="fl-card-price">52<small>&euro;</small></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-expanded">
+                        <h5 class="card-title">Your order status</h5>
+                        <div class="row text-center">
+                            <div class="col-3 fl-status-done">
+                                <?php include 'includes/svg/icon/booked.svg' ?>
+                                <p class="fl-status-title">booked</p>
+                                <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
+                            </div>
+                            <div class="col-3 fl-status-done">
+                                <?php include 'includes/svg/icon/dropped.svg' ?>
+                                <p class="fl-status-title">dropped</p>
+                                <p>Drop your clothes in the locker.</p>
+                            </div>
+                            <div class="col-3">
+
+                                <?php include 'includes/svg/icon/review.svg' ?>
+
+                                <p class="fl-status-title">review</p>
+                                <p>washio will review your order and send you a text message with a link to approve the final amount.</p>
+                            </div>
+                            <!--
                         <div class="col-3">
 
                             <?php include 'includes/svg/icon/payment.svg' ?>
@@ -200,70 +288,77 @@
                             <p class="fl-status-title">payment</p>
                             <p>At that stage you will need to pay through the Falicity Lockers platform.</p>
                         </div>-->
-                        <div class="col-3">
+                            <div class="col-3">
 
-                            <?php include 'includes/svg/icon/delivery.svg' ?>
+                                <?php include 'includes/svg/icon/delivery.svg' ?>
 
-                            <p class="fl-status-title">delivery</p>
-                            <p>You will receive a message once your clothes are ready for pickup.</p>
+                                <p class="fl-status-title">delivery</p>
+                                <p>You will receive a message once your clothes are ready for pickup.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">returns<small> / booked</small><i class="icon-view"></i></h5>
-                    <p class="card-main-message">You have booked a locker to return an item.</p>
-                    <div class="row">
-                        <div class="col-6">
-                            <label>Box size :</label>
-                            <p>medium (B)<br>385x350x135</p>
-                            <label>Date :</label>
-                            <p>19/11/17</p>
-                        </div>
-                        <div class="col-6">
-                            <label>Location :</label>
-                            <p>Espace Bascule</p>
-                            <label>Time :</label>
-                            <p>6-12AM</p>
+
+            <div class="col-12 col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">returns<small> / booked</small><i class="icon-view"></i></h5>
+                        <p class="card-main-message">You have booked a locker to return an item.</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <label>Box size :</label>
+                                <p>medium (B)<br>385x350x135</p>
+                                <label>Date :</label>
+                                <p>19/11/17</p>
+                            </div>
+                            <div class="col-6">
+                                <label>Location :</label>
+                                <p>Espace Bascule</p>
+                                <label>Time :</label>
+                                <p>6-12AM</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-expanded">
-                    <h5 class="card-title">Your order status</h5>
-                    <div class="row text-center">
-                        <div class="col-3 fl-status-done">
-                            <?php include 'includes/svg/icon/booked.svg' ?>
-                            <p class="fl-status-title">booked</p>
-                            <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
+                    <div class="card-expanded">
+                        <h5 class="card-title">Your order status</h5>
+                        <div class="row text-center">
+                            <div class="col-3 fl-status-done">
+                                <?php include 'includes/svg/icon/booked.svg' ?>
+                                <p class="fl-status-title">booked</p>
+                                <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">DPD<small> / pickup ready</small><i class="icon-view"></i></h5>
-                    <p class="card-main-message">You have one item waiting for you!</p>
-                    <div class="row">
-                        <div class="col-6">
-                            <label>Sender :</label>
-                            <p>amazon.fr</p>
-                            <label>Pickup until :</label>
-                            <p>23/11/17 - 6PM</p>
-                        </div>
-                        <div class="col-6">
-                            <label>Location :</label>
-                            <p>Espace Bascule</p>
+
+            <div class="col-12 col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">DPD<small> / pickup ready</small><i class="icon-view"></i></h5>
+                        <p class="card-main-message">You have one item waiting for you!</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <label>Sender :</label>
+                                <p>amazon.fr</p>
+                                <label>Pickup until :</label>
+                                <p>23/11/17 - 6PM</p>
+                            </div>
+                            <div class="col-6">
+                                <label>Location :</label>
+                                <p>Espace Bascule</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-expanded">
-                    <h5 class="card-title">Your order status</h5>
-                    <div class="row text-center">
-                        <div class="col-3 fl-status-done">
-                            <?php include 'includes/svg/icon/booked.svg' ?>
-                            <p class="fl-status-title">booked</p>
-                            <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
+                    <div class="card-expanded">
+                        <h5 class="card-title">Your order status</h5>
+                        <div class="row text-center">
+                            <div class="col-3 fl-status-done">
+                                <?php include 'includes/svg/icon/booked.svg' ?>
+                                <p class="fl-status-title">booked</p>
+                                <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

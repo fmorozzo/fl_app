@@ -58,6 +58,10 @@ H2 -> 38px
 
 /******* section-panel *******/
 
+.fl-primary-nav + .fl-panel {
+    margin-top: 100px;
+}
+
 .fl-panel {
     margin: 3rem auto;
 
@@ -112,6 +116,11 @@ H2 -> 38px
                 small {
                     text-transform: lowercase;
                     font-size: $font-size-sm;
+                }
+                .icon-view {
+                    position: absolute;
+                    top: -20px;
+                    right: -10px;
                 }
             }
             .card-body {
@@ -382,5 +391,30 @@ H2 -> 38px
 @include media-breakpoint-up(md) {
     .fl-panel .container .card .card-body .fl-card-price {
         font-size: 3rem;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .fl-panel {
+        .container {
+            .card {
+                .fl-card-price {
+                    font-size: 3rem;
+                }
+                &.expanded {
+                    flex-direction: column;
+                    height: auto;
+                    .card-body {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                    .card-expanded {
+
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
     }
 }

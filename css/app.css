@@ -6613,6 +6613,9 @@ H2 -> 38px
     color: #003A6F; }
 
 /******* section-panel *******/
+.fl-primary-nav + .fl-panel {
+  margin-top: 100px; }
+
 .fl-panel {
   margin: 3rem auto; }
   .fl-panel .container {
@@ -6660,6 +6663,10 @@ H2 -> 38px
         .fl-panel .container .card .card-title small {
           text-transform: lowercase;
           font-size: 0.875rem; }
+        .fl-panel .container .card .card-title .icon-view {
+          position: absolute;
+          top: -20px;
+          right: -10px; }
       .fl-panel .container .card .card-body {
         font-size: 0.75rem; }
         .fl-panel .container .card .card-body .fl-icon-circle {
@@ -6835,6 +6842,18 @@ H2 -> 38px
 @media (min-width: 768px) {
   .fl-panel .container .card .card-body .fl-card-price {
     font-size: 3rem; } }
+@media (max-width: 991px) {
+  .fl-panel .container .card .fl-card-price {
+    font-size: 3rem; }
+  .fl-panel .container .card.expanded {
+    flex-direction: column;
+    height: auto; }
+    .fl-panel .container .card.expanded .card-body {
+      flex: 0 0 100%;
+      max-width: 100%; }
+    .fl-panel .container .card.expanded .card-expanded {
+      flex: 0 0 100%;
+      max-width: 100%; } }
 h1,
 h2,
 h3,
@@ -6882,8 +6901,8 @@ h6,
 
 /* ------- DO NOT EDIT BELOW --------- */
 .chart-one {
-  width: 85px;
-  height: 85px;
+  width: 70px;
+  height: 70px;
   margin: 0;
   position: relative; }
   .chart-one.animate svg .circle-foreground {
@@ -6896,7 +6915,7 @@ h6,
     width: 100%;
     height: 100%; }
     .chart-one svg .circle-background, .chart-one svg .circle-foreground {
-      r: 37.5px;
+      r: 30px;
       cx: 50%;
       cy: 50%;
       fill: none;
@@ -6904,8 +6923,8 @@ h6,
       stroke-width: 10px; }
     .chart-one svg .circle-foreground {
       stroke: url(#linearGradient-1);
-      stroke-dasharray: 176.625px 235.5px;
-      stroke-dashoffset: 176.625px;
+      stroke-dasharray: 141.3px 188.4px;
+      stroke-dashoffset: 141.3px;
       stroke-linecap: round;
       transform-origin: 50% 50%;
       transform: rotate(-90deg); }
@@ -6933,8 +6952,8 @@ h6,
   100% {
     transform: translateY(-75rem); } }
 .chart-mini {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   margin: 0;
   position: relative; }
   .chart-mini.animate svg .circle-foreground {
@@ -6947,7 +6966,7 @@ h6,
     width: 100%;
     height: 100%; }
     .chart-mini svg .circle-background, .chart-mini svg .circle-foreground {
-      r: 36px;
+      r: 31px;
       cx: 50%;
       cy: 50%;
       fill: none;
@@ -6955,8 +6974,8 @@ h6,
       stroke-width: 8px; }
     .chart-mini svg .circle-foreground {
       stroke: url(#linearGradient-1);
-      stroke-dasharray: 113.04px 226.08px;
-      stroke-dashoffset: 113.04px;
+      stroke-dasharray: 97.34px 194.68px;
+      stroke-dashoffset: 97.34px;
       stroke-linecap: round;
       transform-origin: 50% 50%;
       transform: rotate(-90deg); }

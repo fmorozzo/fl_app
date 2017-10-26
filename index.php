@@ -15,7 +15,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
 </head>
-<nav class="fl-primary-nav navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="fl-primary-nav navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#"><img src="img/svg/logo/horizontal/white.svg" alt="Facility Lockers logo" class="fl-brand-logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -125,7 +125,7 @@
                                 <button class="btn btn-primary btn-sm">profile</button>
                             </div>
                             <div class="col-6">
-                                <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                                <img src="img/svg/icon/pickup_circle.svg" class="fl-notif-img" alt="pickup" />
                             </div>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                                 <button class="btn btn-primary btn-sm">profile</button>
                             </div>
                             <div class="col-6">
-                                <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                                <img src="img/svg/icon/pickup_circle.svg" class="fl-notif-img" alt="pickup" />
                             </div>
                         </div>
                     </div>
@@ -194,7 +194,7 @@
                                 <button class="btn btn-primary btn-sm">profile</button>
                             </div>
                             <div class="col-6">
-                                <img src="img/svg/icon/pickup_circle.svg" alt="pickup" />
+                                <img src="img/svg/icon/pickup_circle.svg" class="fl-notif-img" alt="pickup" />
                             </div>
                         </div>
                     </div>
@@ -466,11 +466,11 @@
     <nav class="fl-quick-access-nav navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <span class="fl-nav-title">Quick Access <br>to my services</span>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarQuickAccessContent" aria-controls="navbarQuickAccessContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-            <div class="collapse navbar-collapse align-self-end" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse align-self-end" id="navbarQuickAccessContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <button class="nav-link fl-btn-qa-drycleaning" href="#">Dry Cleaning</button>

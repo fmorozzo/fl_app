@@ -6582,38 +6582,57 @@ Fonts:
 body, p -> 16px
 H2 -> 38px
 */
+.btn-main,
+.btn-primary,
+.btn-secondary,
+.btn-secondaryLight {
+  color: white; }
+
 /******* navbar ******/
 .fl-primary-nav {
   font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
   font-weight: normal; }
-  .fl-primary-nav .nav-item {
-    position: relative;
-    z-index: 1; }
-    .fl-primary-nav .nav-item.active:before, .fl-primary-nav .nav-item:hover:before {
-      position: absolute;
-      top: -10px;
-      right: 0;
-      bottom: 0;
-      left: 6px;
-      content: "";
-      background: url(../img/svg/icon/tail/red.svg) no-repeat;
-      z-index: 0; }
-    .fl-primary-nav .nav-item:hover:before {
-      opacity: .3; }
-    .fl-primary-nav .nav-item.active:hover:before {
-      opacity: 1; }
-    .fl-primary-nav .nav-item.active .nav-link, .fl-primary-nav .nav-item.active .nav-link:hover {
-      font-weight: bold; }
-    .fl-primary-nav .nav-item .nav-link,
-    .fl-primary-nav .nav-item .nav-link:hover {
+  .fl-primary-nav .navbar-nav {
+    padding-right: 3rem;
+    margin-left: auto; }
+    .fl-primary-nav .navbar-nav .nav-item {
       position: relative;
-      color: #fff;
-      font-weight: lighter; }
-  .fl-primary-nav .btn.dropdown-toggle:hover {
+      z-index: 1; }
+      .fl-primary-nav .navbar-nav .nav-item.active:before, .fl-primary-nav .navbar-nav .nav-item:hover:before {
+        position: absolute;
+        top: -10px;
+        right: 0;
+        bottom: 0;
+        left: 6px;
+        content: "";
+        background: url(../img/svg/icon/tail/red.svg) no-repeat;
+        z-index: 0; }
+      .fl-primary-nav .navbar-nav .nav-item:hover:before {
+        opacity: .3; }
+      .fl-primary-nav .navbar-nav .nav-item.active:hover:before {
+        opacity: 1; }
+      .fl-primary-nav .navbar-nav .nav-item.active .nav-link, .fl-primary-nav .navbar-nav .nav-item.active .nav-link:hover {
+        font-weight: bold; }
+      .fl-primary-nav .navbar-nav .nav-item .nav-link,
+      .fl-primary-nav .navbar-nav .nav-item .nav-link:hover {
+        position: relative;
+        color: #fff;
+        font-weight: lighter; }
+  .fl-primary-nav .btn.dropdown-toggle:hover,
+  .fl-primary-nav .btn-outline-light:active,
+  .fl-primary-nav .btn-outline-light.active,
+  .fl-primary-nav .show > .btn-outline-light.dropdown-toggle {
     color: #003A6F; }
+  .fl-primary-nav .dropdown-menu {
+    right: 0;
+    left: inherit; }
+
+.navbar-collapse.show .dropdown-menu {
+  right: inherit;
+  left: 0; }
 
 /******* section-panel *******/
-.fl-primary-nav + .fl-panel {
+.fl-primary-nav + .fl-section {
   margin-top: 100px; }
 
 .fl-panel {
@@ -6624,106 +6643,107 @@ H2 -> 38px
     overflow: hidden;
     padding-top: 2.5rem;
     padding-bottom: 2rem; }
-    .fl-panel .container .fl-panel-title {
-      margin-bottom: 2rem;
-      position: relative; }
-      .fl-panel .container .fl-panel-title:before {
-        position: absolute;
-        right: 0;
-        bottom: -13px;
-        left: 0;
-        background: #FF595A;
-        content: "";
-        height: 2px;
-        width: 125px; }
-    .fl-panel .container .card {
-      /*min-width: 250px;
-      max-width: 250px;
-      margin: 0 1rem 1rem 0;
-      height: 200px;
-      max-height: 200px;*/
-      margin-top: 1rem;
+
+.fl-section .container .fl-panel-title {
+  margin-bottom: 2rem;
+  position: relative; }
+  .fl-section .container .fl-panel-title:before {
+    position: absolute;
+    right: 0;
+    bottom: -13px;
+    left: 0;
+    background: #FF595A;
+    content: "";
+    height: 2px;
+    width: 125px; }
+.fl-section .container .card {
+  /*min-width: 250px;
+  max-width: 250px;
+  margin: 0 1rem 1rem 0;
+  height: 200px;
+  max-height: 200px;*/
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0, 58, 111, 0.5);
+  border-radius: 3px;
+  transition: all .5s ease; }
+  .fl-section .container .card .card-title {
+    position: relative;
+    margin-top: .625rem;
+    margin-bottom: 1.25rem; }
+    .fl-section .container .card .card-title:before {
+      position: absolute;
+      right: 0;
+      bottom: -5px;
+      left: 0;
+      background: #00C2C2;
+      content: "";
+      height: 2px;
+      width: 80px; }
+    .fl-section .container .card .card-title small {
+      text-transform: lowercase;
+      font-size: 0.875rem; }
+    .fl-section .container .card .card-title .icon-view {
+      position: absolute;
+      top: -20px;
+      right: -10px; }
+  .fl-section .container .card .card-body {
+    font-size: 0.75rem; }
+    .fl-section .container .card .card-body .fl-icon-circle {
       margin-bottom: 1rem;
-      border: 1px solid rgba(0, 58, 111, 0.5);
-      border-radius: 3px;
-      transition: all .5s ease; }
-      .fl-panel .container .card .card-title {
-        position: relative;
-        margin-top: .625rem;
-        margin-bottom: 1.25rem; }
-        .fl-panel .container .card .card-title:before {
-          position: absolute;
-          right: 0;
-          bottom: -5px;
-          left: 0;
-          background: #00C2C2;
-          content: "";
-          height: 2px;
-          width: 80px; }
-        .fl-panel .container .card .card-title small {
-          text-transform: lowercase;
-          font-size: 0.875rem; }
-        .fl-panel .container .card .card-title .icon-view {
-          position: absolute;
-          top: -20px;
-          right: -10px; }
-      .fl-panel .container .card .card-body {
-        font-size: 0.75rem; }
-        .fl-panel .container .card .card-body .fl-icon-circle {
-          margin-bottom: 1rem;
-          max-width: 4rem; }
-        .fl-panel .container .card .card-body label {
-          margin-bottom: 0;
-          font-weight: bold; }
-        .fl-panel .container .card .card-body .fl-card-price {
-          font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
-          font-weight: bold;
-          color: #FF595A;
-          font-size: 4rem;
-          line-height: 1;
-          margin-right: -15px; }
-          .fl-panel .container .card .card-body .fl-card-price small {
-            font-size: 1.75rem;
-            font-weight: bold; }
-      .fl-panel .container .card.expanded {
-        display: flex;
-        width: 100%;
-        flex: none;
-        min-width: inherit;
-        max-width: inherit;
-        flex-direction: row; }
-        .fl-panel .container .card.expanded .card-body {
-          flex: 0 0 25%;
-          max-width: 25%; }
-        .fl-panel .container .card.expanded .card-expanded {
-          display: block;
-          flex: 0 0 75%;
-          max-width: 75%;
-          padding: 1.25rem;
-          background-color: rgba(0, 58, 111, 0.08);
-          color: rgba(0, 58, 111, 0.5); }
-          .fl-panel .container .card.expanded .card-expanded p {
-            font-size: 0.75rem;
-            margin-top: 1rem;
-            color: rgba(0, 58, 111, 0.5); }
-          .fl-panel .container .card.expanded .card-expanded .fl-icon-status {
-            margin-top: 1rem; }
-            .fl-panel .container .card.expanded .card-expanded .fl-icon-status * {
-              fill: rgba(0, 58, 111, 0.3); }
-          .fl-panel .container .card.expanded .card-expanded .fl-status-title {
-            font-size: 1rem;
-            font-weight: bold;
-            margin-top: .25rem;
-            color: rgba(0, 58, 111, 0.3); }
-          .fl-panel .container .card.expanded .card-expanded .fl-status-done p {
-            color: #003A6F; }
-          .fl-panel .container .card.expanded .card-expanded .fl-status-done .fl-status-title {
-            font-size: 1rem;
-            color: #00C2C2; }
-          .fl-panel .container .card.expanded .card-expanded .fl-status-done .fl-icon-status * {
-            fill: #00C2C2; }
-      .fl-panel .container .card .card-expanded {
-        display: none; }
+      max-width: 4rem; }
+    .fl-section .container .card .card-body label {
+      margin-bottom: 0;
+      font-weight: bold; }
+    .fl-section .container .card .card-body .fl-card-price {
+      font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
+      font-weight: bold;
+      color: #FF595A;
+      font-size: 4rem;
+      line-height: 1;
+      margin-right: -15px; }
+      .fl-section .container .card .card-body .fl-card-price small {
+        font-size: 1.75rem;
+        font-weight: bold; }
+  .fl-section .container .card.expanded {
+    display: flex;
+    width: 100%;
+    flex: none;
+    min-width: inherit;
+    max-width: inherit;
+    flex-direction: row; }
+    .fl-section .container .card.expanded .card-body {
+      flex: 0 0 25%;
+      max-width: 25%; }
+    .fl-section .container .card.expanded .card-expanded {
+      display: block;
+      flex: 0 0 75%;
+      max-width: 75%;
+      padding: 1.25rem;
+      background-color: rgba(0, 58, 111, 0.08);
+      color: rgba(0, 58, 111, 0.5); }
+      .fl-section .container .card.expanded .card-expanded p {
+        font-size: 0.75rem;
+        margin-top: 1rem;
+        color: rgba(0, 58, 111, 0.5); }
+      .fl-section .container .card.expanded .card-expanded .fl-icon-status {
+        margin-top: 1rem; }
+        .fl-section .container .card.expanded .card-expanded .fl-icon-status * {
+          fill: rgba(0, 58, 111, 0.3); }
+      .fl-section .container .card.expanded .card-expanded .fl-status-title {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: .25rem;
+        color: rgba(0, 58, 111, 0.3); }
+      .fl-section .container .card.expanded .card-expanded .fl-status-done p {
+        color: #003A6F; }
+      .fl-section .container .card.expanded .card-expanded .fl-status-done .fl-status-title {
+        font-size: 1rem;
+        color: #00C2C2; }
+      .fl-section .container .card.expanded .card-expanded .fl-status-done .fl-icon-status * {
+        fill: #00C2C2; }
+  .fl-section .container .card .card-expanded {
+    display: none; }
 
 .icon-view {
   background: url(../img/svg/icon/eye.svg) no-repeat right top;
@@ -6790,37 +6810,118 @@ H2 -> 38px
     font-weight: bold;
     font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
     white-space: nowrap; }
-  .fl-quick-access-nav .nav-item .nav-link {
-    padding-left: 40px;
-    position: relative;
-    background-image: linear-gradient(-153deg, rgba(126, 214, 214, 0.8) 5%, #7ED6D6 100%);
-    border-radius: 4px;
-    border: none;
-    color: #fff;
-    margin: 0 0 0 1rem;
-    cursor: pointer; }
-    .fl-quick-access-nav .nav-item .nav-link:hover {
+  .fl-quick-access-nav .nav-item {
+    text-align: center; }
+    .fl-quick-access-nav .nav-item .nav-link {
+      padding-left: 40px;
+      position: relative;
+      border-radius: 4px;
+      border: none;
       color: #fff;
-      background-image: linear-gradient(153deg, rgba(0, 194, 194, 0.8) 5%, #00C2C2 100%); }
-    .fl-quick-access-nav .nav-item .nav-link:before {
+      margin: 0 0 0 1rem;
+      cursor: pointer; }
+      .fl-quick-access-nav .nav-item .nav-link:hover {
+        color: #fff;
+        background-image: linear-gradient(-153deg, rgba(126, 214, 214, 0.8) 5%, #7ED6D6 100%) !important; }
+      .fl-quick-access-nav .nav-item .nav-link:before {
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background-position: 4px 4px;
+        background-repeat: no-repeat; }
+      .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-drycleaning:before {
+        background-image: url(../img/svg/icon/dry_cleaning.svg); }
+      .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-ironing:before {
+        background-image: url(../img/svg/icon/ironing.svg); }
+      .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-itrepair:before {
+        background-image: url(../img/svg/icon/it_repair.svg); }
+      .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-sewing:before {
+        background-image: url(../img/svg/icon/sewing.svg); }
+      .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-shoerepair:before {
+        background-image: url(../img/svg/icon/shoe_repair.svg); }
+
+@media (max-width: 991px) {
+  .fl-quick-access-nav .fl-nav-title {
+    display: flex;
+    flex: 0 0 25%;
+    max-width: 25%;
+    font-size: 1rem; }
+  .fl-quick-access-nav .navbar-toggler {
+    display: none; }
+  .fl-quick-access-nav .navbar-collapse {
+    display: flex;
+    flex: 0 0 75%;
+    max-width: 75%; }
+  .fl-quick-access-nav .navbar-nav {
+    flex-direction: row; }
+    .fl-quick-access-nav .navbar-nav .nav-item {
+      margin: 0; }
+      .fl-quick-access-nav .navbar-nav .nav-item .nav-link {
+        margin: 0;
+        text-indent: -9999px;
+        width: 40px;
+        background: none transparent; }
+        .fl-quick-access-nav .navbar-nav .nav-item .nav-link.fl-btn-qa-drycleaning:before {
+          background-image: url(../img/svg/icon/dry_cleaning_invert.svg); }
+        .fl-quick-access-nav .navbar-nav .nav-item .nav-link.fl-btn-qa-ironing:before {
+          background-image: url(../img/svg/icon/ironing_invert.svg); }
+        .fl-quick-access-nav .navbar-nav .nav-item .nav-link.fl-btn-qa-itrepair:before {
+          background-image: url(../img/svg/icon/it_repair_invert.svg); }
+        .fl-quick-access-nav .navbar-nav .nav-item .nav-link.fl-btn-qa-sewing:before {
+          background-image: url(../img/svg/icon/sewing_invert.svg); }
+        .fl-quick-access-nav .navbar-nav .nav-item .nav-link.fl-btn-qa-shoerepair:before {
+          background-image: url(../img/svg/icon/shoe_repair_invert.svg); } }
+/******* SERVICES ****/
+/* Main section */
+.fl-section-services .fl-slogan {
+  font-size: 3rem;
+  color: #003A6F;
+  font-weight: normal;
+  text-transform: inherit; }
+  .fl-section-services .fl-slogan em {
+    font-weight: bold;
+    font-style: normal;
+    color: #FF595A; }
+.fl-section-services .container .card {
+  border: none 0;
+  text-align: center; }
+  .fl-section-services .container .card .fl-card-img-wrapper {
+    min-height: 13.75rem;
+    text-align: center;
+    padding-top: 4.5rem;
+    position: relative; }
+    .fl-section-services .container .card .fl-card-img-wrapper:before {
       content: "";
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
       position: absolute;
-      background-position: 4px 4px;
-      background-repeat: no-repeat; }
-    .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-drycleaning:before {
-      background-image: url(../img/svg/icon/dry_cleaning.svg); }
-    .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-ironing:before {
-      background-image: url(../img/svg/icon/ironing.svg); }
-    .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-itrepair:before {
-      background-image: url(../img/svg/icon/it_repair.svg); }
-    .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-sewing:before {
-      background-image: url(../img/svg/icon/sewing.svg); }
-    .fl-quick-access-nav .nav-item .nav-link.fl-btn-qa-shoerepair:before {
-      background-image: url(../img/svg/icon/shoe_repair.svg); }
+      top: 3.45rem;
+      right: 0;
+      bottom: auto;
+      left: 0;
+      width: 6.25rem;
+      height: 6.25rem;
+      border-radius: 3.125rem;
+      border: 3px solid #fff;
+      margin: 0 auto; }
+    .fl-section-services .container .card .fl-card-img-wrapper .fl-card-img {
+      width: 4rem;
+      height: 4rem;
+      position: relative;
+      margin-bottom: 2rem; }
+    .fl-section-services .container .card .fl-card-img-wrapper .fl-card-title {
+      color: #fff;
+      text-align: center;
+      font-weight: normal;
+      text-transform: lowercase; }
+  @media (min-width: 768px) {
+    .fl-section-services .container .card:nth-child(even) {
+      flex-direction: column-reverse; } }
+  .fl-section-services .container .card .card-body {
+    min-height: 13.75rem; }
+    .fl-section-services .container .card .card-body p {
+      font-size: 1.125rem; }
 
 /******* SVG *******/
 .fl-icon-status .fl-svg-check {
@@ -6838,6 +6939,19 @@ H2 -> 38px
     transform: scale(0); }
   to {
     transform: scale(1); } }
+/******* background colors *******/
+.fl-bg-main {
+  background-image: linear-gradient(63deg, rgba(0, 56, 112, 0.8) 5%, #003870 100%) !important; }
+
+.fl-bg-primary {
+  background-image: linear-gradient(63deg, rgba(255, 88, 90, 0.8) 5%, #FF585A 100%) !important; }
+
+.fl-bg-secondary {
+  background-image: linear-gradient(63deg, rgba(0, 194, 194, 0.8) 5%, #00C2C2 100%) !important; }
+
+.fl-bg-secondaryLight {
+  background-image: linear-gradient(63deg, rgba(126, 214, 214, 0.8) 5%, #7ED6D6 100%) !important; }
+
 /******* media queries fixtures *******/
 @media (min-width: 768px) {
   .fl-panel .container .card .card-body .fl-card-price {

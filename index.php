@@ -23,7 +23,7 @@
   </button>
 
         <div class="collapse navbar-collapse align-self-end" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto pr-5">
+            <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Dashboard</a>
                 </li>
@@ -31,7 +31,7 @@
                     <a class="nav-link" href="#">How it works</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link" href="services.php">Services</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Locations</a>
@@ -248,17 +248,17 @@
                     <div class="card-expanded">
                         <h5 class="card-title">Your order status</h5>
                         <div class="row text-center">
-                            <div class="col-3 fl-status-done">
+                            <div class="col-6 col-md-3 fl-status-done">
                                 <?php include 'includes/svg/icon/booked.svg' ?>
                                 <p class="fl-status-title">booked</p>
                                 <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
                             </div>
-                            <div class="col-3 fl-status-done">
+                            <div class="col-6 col-md-3 fl-status-done">
                                 <?php include 'includes/svg/icon/dropped.svg' ?>
                                 <p class="fl-status-title">dropped</p>
                                 <p>Drop your clothes in the locker.</p>
                             </div>
-                            <div class="col-3">
+                            <div class="col-6 col-md-3">
 
                                 <?php include 'includes/svg/icon/review.svg' ?>
 
@@ -266,14 +266,14 @@
                                 <p>washio will review your order and send you a text message with a link to approve the final amount.</p>
                             </div>
                             <!--
-                        <div class="col-3">
+                        <div class="col-6 col-md-3">
 
                             <?php include 'includes/svg/icon/payment.svg' ?>
 
                             <p class="fl-status-title">payment</p>
                             <p>At that stage you will need to pay through the Falicity Lockers platform.</p>
                         </div>-->
-                            <div class="col-3">
+                            <div class="col-6 col-md-3">
 
                                 <?php include 'includes/svg/icon/delivery.svg' ?>
 
@@ -308,7 +308,7 @@
                     <div class="card-expanded">
                         <h5 class="card-title">Your order status</h5>
                         <div class="row text-center">
-                            <div class="col-3 fl-status-done">
+                            <div class="col-6 col-md-3 fl-status-done">
                                 <?php include 'includes/svg/icon/booked.svg' ?>
                                 <p class="fl-status-title">booked</p>
                                 <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
@@ -339,7 +339,7 @@
                     <div class="card-expanded">
                         <h5 class="card-title">Your order status</h5>
                         <div class="row text-center">
-                            <div class="col-3 fl-status-done">
+                            <div class="col-6 col-md-3 fl-status-done">
                                 <?php include 'includes/svg/icon/booked.svg' ?>
                                 <p class="fl-status-title">booked</p>
                                 <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>

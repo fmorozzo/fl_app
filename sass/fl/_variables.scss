@@ -55,6 +55,10 @@ $gray-500: #AAA; // FL
 $gray-800: #3f3f3f; // FL
 //$gray-900: #212529;
 $black: #000; // FL
+$grad-main: linear-gradient(63deg, rgba(0, 56, 112, 0.80) 5%, #003870 100%);
+$grad-primary: linear-gradient(63deg, rgba(255, 88, 90, 0.80) 5%, #FF585A 100%);
+$grad-secondary: linear-gradient(63deg, rgba(0, 194, 194, 0.80) 5%, #00C2C2 100%);
+$grad-secondaryLight: linear-gradient(63deg, rgba(126, 214, 214, 0.80) 5%, #7ED6D6 100%);
 //
 $grays: ( 100: $gray-100,
 400: $gray-400,
@@ -90,7 +94,11 @@ teal: $teal,
 cyan: $cyan,
 white: $white,
 gray: $gray-500,
-gray-dark: $gray-800);
+gray-dark: $gray-800,
+grad-main: $grad-main,
+grad-primary: $grad-primary,
+grad-secondary: $grad-secondary,
+grad-secondaryLight: $grad-secondaryLight);
 
 $theme-colors: ( main:$blue,
 primary: $squirel,
@@ -282,7 +290,7 @@ $headings-secondary-color: theme-color('main');
 //$table-cell-padding:            .75rem !default;
 //$table-cell-padding-sm:         .3rem !default;
 //$table-bg:                      transparent !default;
-$table-accent-bg : rgba(theme-color('secondary'), .1);
+$table-accent-bg: rgba(theme-color('secondary'), .1);
 $table-hover-bg: rgba(theme-color('secondary'), .3);
 //$table-active-bg:               $table-hover-bg !default;
 //$table-border-width:            $border-width !default;

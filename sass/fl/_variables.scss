@@ -70,6 +70,7 @@ $squirel: #FF595A; // FL
 $indigo: #6610f2 !default;
 //$turquoise: #7ED6D6; //FL
 $turquoise: #00C2C2;
+$turquoiseLight: #7ED6D6;
 $turquoiseOfficial: #C7E8E8;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
@@ -103,13 +104,15 @@ grad-secondaryLight: $grad-secondaryLight);
 $theme-colors: ( main:$blue,
 primary: $squirel,
 secondary: $turquoise,
-secondaryLight: $turquoiseOfficial,
+secondaryLight: $turquoiseLight,
+secondaryOfficial: $turquoiseOfficial,
 success: $green,
 info: $cyan,
 warning: $yellow,
 danger: $red,
 light: $white,
 dark: $blue,
+grayLight: $gray-100,
 borders:rgba(0, 58, 111, 0.5));
 //
 // Set a specific jump point for requesting color jumps

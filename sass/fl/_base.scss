@@ -18,8 +18,27 @@ H2 -> 38px
 .btn-main,
 .btn-primary,
 .btn-secondary,
-.btn-secondaryLight {
+.btn-secondaryLight,
+.btn-main:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-secondaryLight:hover {
     color: white;
+}
+
+.btn-light {
+    color: lighten(theme-color('main'), 5%);
+    &:hover {
+        color: theme-color('main');
+    }
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.fl-link {
+    text-decoration: underline;
 }
 
 /******* navbar ******/
@@ -91,7 +110,6 @@ H2 -> 38px
 }
 
 .fl-panel {
-    margin: 3rem auto;
     .container {
         background-color: $white;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -102,7 +120,7 @@ H2 -> 38px
 }
 
 .fl-section {
-
+    margin: 3rem auto;
     .container {
 
 
@@ -178,6 +196,57 @@ H2 -> 38px
                     small {
                         font-size: 1.75rem;
                         font-weight: $font-weight-bold;
+                    }
+                }
+            }
+            &.fl-card-priority {
+                background: theme-color('secondary');
+                color: $white;
+                border-color: darken(theme-color('secondary'), 5%);
+                .card-title {
+                    color: $white;
+                    &:before {
+                        background-color: $white;
+                    }
+                }
+                .btn {
+                    border: $white;
+                    color: theme-color('secondary');
+                    background-color: $white;
+                    cursor: pointer;
+                    &:hover {
+                        color: darken(theme-color('secondary'), 15%);
+                    }
+                }
+                .fl-link {
+                    color: $white;
+                }
+                .icon-view {
+                    background-image: url(../img/svg/icon/eye_white.svg);
+                }
+
+                &.expanded {
+                    .card-expanded {
+                        > div > div {
+                            text-align: center;
+                            opacity: .5;
+                        }
+                        p {
+                            color: $white !important;
+                        }
+                        .fl-icon-status * {
+                            fill: $white;
+                        }
+                        .fl-status-done {
+                            opacity: 1;
+                            color: $white;
+                            .fl-status-title {
+                                color: $white;
+                            }
+                            .fl-icon-status * {
+                                fill: $white;
+                            }
+                        }
                     }
                 }
             }
@@ -437,6 +506,37 @@ H2 -> 38px
 
 /* Main section */
 
+.fl-card-img-wrapper,
+.fl-modal-img-wrapper {
+    text-align: center;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: auto;
+        left: 0;
+        border: 3px solid $white;
+        margin: 0 auto;
+    }
+    .fl-card-img,
+    .fl-modal-img {
+        position: relative;
+
+    }
+    .fl-card-title,
+    .fl-modal-title {
+        color: $white;
+        text-align: center;
+        font-weight: $font-weight-normal;
+        text-transform: lowercase;
+    }
+}
+
+.modal-footer {
+    border: 0 none;
+}
+
 .fl-section-services {
     .fl-slogan {
         font-size: 3rem;
@@ -455,35 +555,20 @@ H2 -> 38px
             text-align: center;
             .fl-card-img-wrapper {
                 min-height: (220/16)+rem;
-                text-align: center;
                 padding-top: 4.5rem;
-                position: relative;
                 &:before {
-                    content: "";
-                    position: absolute;
                     top: ((60/16)-.3)+rem; // (220/2-10/2)/16
-                    right: 0;
-                    bottom: auto;
-                    left: 0;
                     width: (100/16) + rem;
                     height: (100/16) + rem;
                     border-radius: (50/16) + rem;
-                    border: 3px solid $white;
-                    margin: 0 auto;
                 }
                 .fl-card-img {
                     width: 4rem;
                     height: 4rem;
-                    position: relative;
                     margin-bottom: 2rem;
 
                 }
-                .fl-card-title {
-                    color: $white;
-                    text-align: center;
-                    font-weight: $font-weight-normal;
-                    text-transform: lowercase;
-                }
+                .fl-card-title {}
             }
 
             @include media-breakpoint-up(md) {
@@ -495,10 +580,239 @@ H2 -> 38px
             .card-body {
 
                 min-height: (220/16)+rem;
-                p {
+                .card-text {
                     font-size: 1.125rem; //18px
+                    margin-top: 1rem;
                 }
             }
+        }
+    }
+}
+
+.fl-modal-img-wrapper {
+    padding-top: 1.5rem;
+    margin: 0 auto;
+    &:before {
+        top: .55rem;
+        width: (100/16) + rem;
+        height: (100/16) + rem;
+        border-radius: (50/16) + rem;
+    }
+    .fl-modal-img {
+        width: 4rem;
+        height: 4rem;
+        margin-bottom: 2rem;
+    }
+    .fl-modal-title {}
+}
+
+@include media-breakpoint-down(md) {
+    .fl-section-services {
+        .card-group {
+            //give .row properties
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+            .card {
+                //give .col-6 properties
+                flex: 0 0 50%;
+                max-width: 50%;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .fl-section-services {
+        .card-group {
+            .card {
+                .card-body {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/******* section how *******/
+
+.fl-section-how {
+    text-align: center;
+    background: $white;
+    padding: 3rem 0;
+    .fl-section-heading {
+        text-transform: inherit;
+    }
+}
+
+.fl-how-diagram {
+
+    .fl-buttons {
+        position: relative;
+        top: 18px;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .fl-parcel-delivery,
+    .fl-use-service {
+        border: 1px solid theme-color('main');
+        border-radius: 5px;
+        padding-top: 2rem;
+        margin-left: 0;
+        margin-right: 0;
+        display: none;
+        text-align: center;
+
+        .fl-step {}
+        .fl-step-number {
+            background-color: theme-color("primary");
+            color: $white; //font-family: Raleway, sans-serif;
+            font-weight: 500;
+            font-size: 1.875rem;
+            border-radius: 20px;
+            width: 40px;
+            height: 40px;
+            display: block;
+            margin: 1rem auto 2rem;
+            line-height: 40px;
+        }
+        .fl-description {
+            font-size: 1rem;
+            font-weight: $font-weight-bold;
+        }
+        &.active {
+            display: flex;
+        }
+    }
+    .fl-use-service {
+        display: none;
+    }
+
+    .fl-toggle-btn {
+        background-color: $white;
+        border-color: theme-color('main');
+        color: theme-color('main');
+        font-weight: 700;
+        padding-right: 30px;
+        padding-left: 30px;
+
+        & + .fl-toggle-btn {
+            margin-left: 10px;
+        }
+        &.active {
+            background-color: theme-color('main');
+            color: $white;
+            border-color: theme-color('main');
+            &:hover {
+                background-color: darken(theme-color('main'), 5%);
+                border-color: theme-color('main');
+            }
+        }
+        &:hover {
+            background-color: theme-color('main');
+            color: $white;
+        }
+    }
+}
+
+
+/******* Service Flow *******/
+
+.fl-section-flow {
+    .container {
+        padding: 0;
+    }
+}
+
+.fl-status-sidebar {
+    .fl-status-vendor {
+        height: 12.5rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        .fl-status-icon {
+            position: relative;
+            margin-top: 3.75rem;
+            &:before {
+                content: "";
+                width: 6.25rem;
+                height: 6.25rem;
+                top: -1rem;
+                right: 0;
+                bottom: 0;
+                left: -1rem;
+                position: absolute;
+                border: 3px solid $white;
+                border-radius: 3.125rem;
+            }
+            .fl-img {
+                width: 4.375rem;
+                height: 4.375rem;
+            }
+        }
+        .fl-status-vendor-title {
+            text-transform: lowercase;
+            color: $white;
+            font-size: $font-size-lg;
+            font-weight: $font-weight-normal;
+            margin-top: 1.75rem;
+        }
+    }
+    .fl-status {
+        color: $gray-500;
+        padding: .875rem;
+        display: flex;
+        align-items: center;
+        background: theme-color('grayLight');
+        border-top: 1px solid $white;
+        .fl-status-icon {
+            float: left;
+            margin-right: 1.25rem;
+            svg * {
+                fill: $gray-500;
+            }
+        }
+        .fl-status-state {
+            .fl-status-title {
+                color: $gray-500;
+                font-size: $font-size-sm;
+                font-weight: $font-weight-normal;
+            }
+            .fl-status-info {
+                font-size: $font-size-xs;
+                margin-bottom: 0;
+            }
+        }
+        &.fl-done {
+            background: theme-color('secondaryLight');
+        }
+        &.fl-active {
+            background: theme-color('secondary');
+        }
+
+        &.fl-done,
+        &.fl-active {
+            color: $white;
+            .fl-status-icon svg * {
+                fill: $white;
+            }
+            .fl-status-state {
+                .fl-status-title {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.fl-flow-container {
+    .fl-flow-header {
+        .fl-flow-header-title {
+            color: theme-color('primary');
+
         }
     }
 }

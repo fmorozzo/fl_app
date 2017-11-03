@@ -58,28 +58,17 @@
         <h4 class="fl-panel-title">Notifications</h4>
         <div class="row">
             <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card">
+                <div class="card fl-card-priority">
                     <div class="card-body">
-                        <h5 class="card-title">Profile</h5>
+                        <h5 class="card-title">Pending Payment</h5>
                         <div class="row">
                             <div class="col-6">
-                                <p class="card-text">Complete your profile to get more points.</p>
-                                <button class="btn btn-primary btn-sm">profile</button>
+                                <p class="card-text">Please fulfill the payment. (45€)
+                                    <a href="#" class="fl-link">order details</a></p>
+                                <button class="btn btn-primary btn-sm">pay now</button>
                             </div>
                             <div class="col-6">
-                                <figure class="chart-one animate">
-                                    <svg role="img" xmlns="http://www.w3.org/2000/svg">
-                                    <circle class="circle-background"/>
-                                    <circle class="circle-foreground" fill="url('#linearGradient-1')"/>
-                                    <defs>
-                                        <linearGradient x1="9.5612282%" y1="63.4538517%" x2="42.2374637%" y2="100%" id="linearGradient-1">
-                                            <stop stop-color="#003A6F" offset="0%"></stop>
-                                            <stop stop-color="#00C2C2" offset="100%"></stop>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                                    <figcaption></figcaption>
-                                </figure>
+                                <img src="img/svg/icon/circle/dry_cleaning.svg" alt="icon service dry cleaning">
                             </div>
                         </div>
                     </div>
@@ -182,25 +171,6 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Points</h5>
-                        <!--                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
-                        <div class="row">
-                            <div class="col-6">
-                                <p class="card-text">Get points each time you share the app.
-                                </p>
-                                <button class="btn btn-primary btn-sm">profile</button>
-                            </div>
-                            <div class="col-6">
-                                <img src="img/svg/icon/pickup_circle.svg" class="fl-notif-img" alt="pickup" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
 
         </div>
     </div>
@@ -211,6 +181,51 @@
         <h4 class="fl-panel-title">Ongoing processes</h4>
 
         <div class="row">
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card fl-card-priority">
+                    <div class="card-body">
+                        <h5 class="card-title">DPD<small> / pending payment</small><i class="icon-view"></i></h5>
+                        <p class="card-main-message">You have one item waiting for you!</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <label>Receptor :</label>
+                                <p>Louis Michel</p>
+                                <label>Payment :</label>
+                                <p>23/11/17</p>
+                            </div>
+                            <div class="col-6">
+                                <label>Location :</label>
+                                <p>Espace Bascule</p>
+                            </div>
+                            <div class="col-12 text-center">
+
+                                <button class="btn btn-primary px-5">pay 15€</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-expanded">
+                        <h5 class="card-title">Your order status</h5>
+                        <div class="row text-center">
+                            <div class="col-6 col-md-3 fl-status-done">
+                                <?php include 'includes/svg/icon/booked.svg' ?>
+                                <p class="fl-status-title">booked</p>
+                                <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <?php include 'includes/svg/icon/payment.svg' ?>
+                                <p class="fl-status-title">pending payment</p>
+                                <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <?php include 'includes/svg/icon/delivery.svg' ?>
+                                <p class="fl-status-title">Delivery</p>
+                                <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="card">
@@ -302,37 +317,6 @@
                                 <p>Espace Bascule</p>
                                 <label>Time :</label>
                                 <p>6-12AM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-expanded">
-                        <h5 class="card-title">Your order status</h5>
-                        <div class="row text-center">
-                            <div class="col-6 col-md-3 fl-status-done">
-                                <?php include 'includes/svg/icon/booked.svg' ?>
-                                <p class="fl-status-title">booked</p>
-                                <p>Well done ! A Locker is waiting for you. Log in to the locker’s terminal to open it.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">DPD<small> / pickup ready</small><i class="icon-view"></i></h5>
-                        <p class="card-main-message">You have one item waiting for you!</p>
-                        <div class="row">
-                            <div class="col-6">
-                                <label>Sender :</label>
-                                <p>amazon.fr</p>
-                                <label>Pickup until :</label>
-                                <p>23/11/17 - 6PM</p>
-                            </div>
-                            <div class="col-6">
-                                <label>Location :</label>
-                                <p>Espace Bascule</p>
                             </div>
                         </div>
                     </div>
@@ -473,19 +457,19 @@
             <div class="collapse navbar-collapse align-self-end" id="navbarQuickAccessContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <button class="nav-link fl-btn-qa-drycleaning" href="#">Dry Cleaning</button>
+                        <button class="nav-link fl-btn-qa-drycleaning btn-secondary" href="dry_cleaning01.php">Dry Cleaning</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link fl-btn-qa-ironing" href="#">Ironing</button>
+                        <button class="nav-link fl-btn-qa-ironing btn-secondary" href="#">Ironing</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link fl-btn-qa-itrepair" href="#">IT Repair</button>
+                        <button class="nav-link fl-btn-qa-itrepair btn-secondary" href="#">IT Repair</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link fl-btn-qa-sewing" href="#">Sewing</button>
+                        <button class="nav-link fl-btn-qa-sewing btn-secondary" href="#">Sewing</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link fl-btn-qa-shoerepair" href="#">Shoe Repair</button>
+                        <button class="nav-link fl-btn-qa-shoerepair btn-secondary" href="#">Shoe Repair</button>
                     </li>
                 </ul>
             </div>

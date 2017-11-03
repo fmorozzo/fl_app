@@ -17,4 +17,17 @@ $(document).ready(function () {
             divCol.attr('class', 'col-12 col-sm-6 col-lg-3');
         }
     })
+
+
+    if ($('.fl-toggle-btn').length) {
+        $('.fl-toggle-btn').click(function () {
+            $('.fl-toggle-btn').toggleClass('active');
+            $('.fl-how-diagram .row').toggleClass('active');
+        });
+
+    };
+
+    $('.btn-modal').click(function () {
+
+    });
 });

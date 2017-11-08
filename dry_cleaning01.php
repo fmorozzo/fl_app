@@ -57,7 +57,7 @@
 <section class="fl-section fl-panel fl-section-flow">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-lg-3">
                 <div class="fl-status-sidebar row">
 
                     <div class="col-12">
@@ -69,7 +69,7 @@
                         </div>
                     </div>
 
-                    <div class="col-3 col-sm-12">
+                    <div class="col-3 col-lg-12">
                         <div class="fl-status fl-done">
                             <div class="fl-status-icon">
                                 <?php include 'includes/svg/icon/status/booking.svg' ?>
@@ -81,7 +81,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3 col-sm-12">
+                    <div class="col-3 col-lg-12">
                         <div class="fl-status fl-active">
                             <div class="fl-status-icon">
                                 <?php include 'includes/svg/icon/status/reviewing.svg' ?>
@@ -92,7 +92,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3 col-sm-12">
+                    <div class="col-3 col-lg-12">
                         <div class="fl-status">
                             <div class="fl-status-icon">
                                 <?php include 'includes/svg/icon/status/payment.svg' ?>
@@ -103,7 +103,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3 col-sm-12">
+                    <div class="col-3 col-lg-12">
                         <div class="fl-status">
                             <div class="fl-status-icon">
                                 <?php include 'includes/svg/icon/status/completion.svg' ?>
@@ -116,7 +116,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-9">
+            <div class="col-12 col-lg-9">
                 <div class="fl-flow-content">
 
                     <div class="fl-flow-header">
@@ -125,7 +125,7 @@
                     </div>
                     <form action="">
                         <div class="row">
-                            <div class="col-12 col-sm-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="md-form">
                                     <select class="mdb-select">
                                         <option value="" disabled selected>Type of cleaning</option>
@@ -173,15 +173,15 @@
                                     <a class="fl-btn-add btn-outline-grayBtn btn btn-sm">add item +</a>
                                 </p>
                             </div>
-                            <div class="col-12 col-sm-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="flow-summary">
                                     <h5 class="flo-summary-headline"></h5>
                                 </div>
                             </div>
 
                             <div class="fl-flow-buttons">
-                                <button class="btn btn-secondaryOfficial px-5">cancel</button>
-                                <button class="btn btn-secondary px-5">continue</button>
+                                <button class="btn btn-secondaryOfficial px-4">cancel</button>
+                                <button class="btn btn-secondary px-4">continue</button>
                             </div>
                         </div>
                     </form>

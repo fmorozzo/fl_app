@@ -872,7 +872,8 @@ H2 -> 38px
     margin: 1rem auto 2rem;
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(lg) {
+
     .fl-status-sidebar {
         background-color: $white;
         .fl-status-icon {
@@ -884,15 +885,19 @@ H2 -> 38px
 
         .fl-status {
             background-color: $white;
-            .fl-status-icon svg {
-                .check {
-                    fill: theme-color('secondary');
-                }
-                .circle {
-                    fill: none;
-                }
-                .main {
-                    fill: $gray-400;
+            border-top: 0 none;
+            .fl-status-icon {
+                margin-top: .5rem;
+                svg {
+                    .check {
+                        fill: theme-color('secondary');
+                    }
+                    .circle {
+                        fill: none;
+                    }
+                    .main {
+                        fill: $gray-400;
+                    }
                 }
             }
             &.fl-done {
@@ -929,16 +934,39 @@ H2 -> 38px
     }
     .fl-flow-content {
         margin-left: 0;
+        border-left: 0 none;
         .fl-flow-header {
             height: auto;
             .fl-flow-header-title {
-                margin-top: 2rem;
+                margin: .5rem auto 1rem;
             }
         }
         form {
             padding-right: 15px;
+            .md-form {
+                margin-bottom: .5rem;
+            }
 
         }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+
+    .fl-primary-nav + .fl-panel {
+        margin: 71px auto 0;
+        .container {
+
+            box-shadow: none;
+        }
+    }
+    .fl-status-sidebar {
+        .fl-status-vendor {
+            display: none;
+        }
+    }
+    form .md-form {
+        margin-bottom: .5rem;
     }
 }
 

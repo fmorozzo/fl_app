@@ -7479,7 +7479,7 @@ H2 -> 38px
 .fl-flow-buttons {
   margin: 1rem auto 2rem; }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .fl-status-sidebar {
     background-color: #fff; }
     .fl-status-sidebar .fl-status-icon {
@@ -7487,13 +7487,16 @@ H2 -> 38px
     .fl-status-sidebar .fl-status-state {
       display: none; }
     .fl-status-sidebar .fl-status {
-      background-color: #fff; }
-      .fl-status-sidebar .fl-status .fl-status-icon svg .check {
-        fill: #00C2C2; }
-      .fl-status-sidebar .fl-status .fl-status-icon svg .circle {
-        fill: none; }
-      .fl-status-sidebar .fl-status .fl-status-icon svg .main {
-        fill: #CCC; }
+      background-color: #fff;
+      border-top: 0 none; }
+      .fl-status-sidebar .fl-status .fl-status-icon {
+        margin-top: .5rem; }
+        .fl-status-sidebar .fl-status .fl-status-icon svg .check {
+          fill: #00C2C2; }
+        .fl-status-sidebar .fl-status .fl-status-icon svg .circle {
+          fill: none; }
+        .fl-status-sidebar .fl-status .fl-status-icon svg .main {
+          fill: #CCC; }
       .fl-status-sidebar .fl-status.fl-done {
         background-color: transparent; }
         .fl-status-sidebar .fl-status.fl-done .fl-status-icon svg .check,
@@ -7515,13 +7518,27 @@ H2 -> 38px
         width: 50%; }
 
   .fl-flow-content {
-    margin-left: 0; }
+    margin-left: 0;
+    border-left: 0 none; }
     .fl-flow-content .fl-flow-header {
       height: auto; }
       .fl-flow-content .fl-flow-header .fl-flow-header-title {
-        margin-top: 2rem; }
+        margin: .5rem auto 1rem; }
     .fl-flow-content form {
-      padding-right: 15px; } }
+      padding-right: 15px; }
+      .fl-flow-content form .md-form {
+        margin-bottom: .5rem; } }
+@media (max-width: 575px) {
+  .fl-primary-nav + .fl-panel {
+    margin: 71px auto 0; }
+    .fl-primary-nav + .fl-panel .container {
+      box-shadow: none; }
+
+  .fl-status-sidebar .fl-status-vendor {
+    display: none; }
+
+  form .md-form {
+    margin-bottom: .5rem; } }
 /******* SVG *******/
 .fl-icon-status .fl-svg-check {
   animation-name: myAnimation;

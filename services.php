@@ -224,7 +224,7 @@
             <div class="collapse navbar-collapse align-self-end" id="navbarQuickAccessContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <button class="nav-link fl-btn-qa-drycleaning btn-secondary" href="dry_cleaning01.php">Dry Cleaning</button>
+                        <a class="nav-link fl-btn-qa-drycleaning btn-secondary" href="dry_cleaning01.php">Dry Cleaning</a>
                     </li>
                     <li class="nav-item">
                         <button class="nav-link fl-btn-qa-ironing btn-secondary" href="#">Ironing</button>
@@ -290,8 +290,8 @@
                 </div>
             </div>
             <div class="modal-footer mx-auto">
-                <button type="button" class="btn btn-secondaryLight px-5" data-dismiss="modal">cancel</button>
-                <button type="button" class="btn btn-secondary px-5">book</button>
+                <button type="button" class="btn btn-secondaryOfficial px-5" data-dismiss="modal">cancel</button>
+                <a href="dry_cleaning01.php" class="btn btn-secondary px-5">book</a>
             </div>
         </div>
     </div>
@@ -301,11 +301,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src=" js/vendor/jquery-3.2.1.min.js "></script>
-    <script src="js/vendor/popper.min.js "></script>
-    <script src="js/vendor/bootstrap.min.js "></script>
-    <script src="js/fl/jquery.alterclass.js "></script>
-    <script src="js/fl/hide.js "></script>
+    <script src=" js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/fl/jquery.alterclass.js"></script>
+    <script src="js/fl/hide.js"></script>
 </body>
 
 </html>

@@ -26,8 +26,7 @@ $(document).ready(function () {
         });
 
     };
-
-    $('.btn-modal').click(function () {
-
+    $(document).ready(function () {
+        $('.mdb-select').material_select();
     });
 });

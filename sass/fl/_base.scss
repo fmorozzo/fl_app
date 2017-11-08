@@ -19,10 +19,12 @@ H2 -> 38px
 .btn-primary,
 .btn-secondary,
 .btn-secondaryLight,
+.btn-secondaryOfficial,
 .btn-main:hover,
 .btn-primary:hover,
 .btn-secondary:hover,
-.btn-secondaryLight:hover {
+.btn-secondaryLight:hover,
+.btn-secondaryOfficial:hover {
     color: white;
 }
 
@@ -39,6 +41,16 @@ H2 -> 38px
 
 .fl-link {
     text-decoration: underline;
+}
+
+.fl-btn-add {
+    color: $gray-500 !important;
+    background-color: $white;
+}
+
+.fl-btn-add:hover {
+    color: $white !important;
+
 }
 
 /******* navbar ******/
@@ -723,10 +735,12 @@ H2 -> 38px
 .fl-section-flow {
     .container {
         padding: 0;
+        background-color: $gray-100;
     }
 }
 
 .fl-status-sidebar {
+    //background-color: $gray-100;
     .fl-status-vendor {
         height: 12.5rem;
         display: flex;
@@ -767,12 +781,15 @@ H2 -> 38px
         display: flex;
         align-items: center;
         background: theme-color('grayLight');
-        border-top: 1px solid $white;
+        border-top: 1px solid $gray-400;
         .fl-status-icon {
             float: left;
             margin-right: 1.25rem;
             svg * {
                 fill: $gray-500;
+            }
+            svg .circle {
+                fill: none;
             }
         }
         .fl-status-state {
@@ -786,8 +803,17 @@ H2 -> 38px
                 margin-bottom: 0;
             }
         }
+        .fl-status-icon svg + svg {
+            display: none;
+        }
         &.fl-done {
             background: theme-color('secondaryLight');
+            .fl-status-icon svg {
+                display: none;
+            }
+            .fl-status-icon svg + svg {
+                display: block;
+            }
         }
         &.fl-active {
             background: theme-color('secondary');
@@ -796,6 +822,7 @@ H2 -> 38px
         &.fl-done,
         &.fl-active {
             color: $white;
+            border-top-color: $white;
             .fl-status-icon svg * {
                 fill: $white;
             }
@@ -805,13 +832,111 @@ H2 -> 38px
                 }
             }
         }
+        &.fl-done {
+            .fl-status-icon svg .circle {
+                fill: none;
+            }
+        }
     }
 }
 
-.fl-flow-container {
+.fl-flow-content {
+    margin-left: -30px;
+    background-color: $gray-100;
+    border-left: 1px solid $gray-400;
     .fl-flow-header {
+        height: 12.5rem;
+        display: flex;
+        background: $white;
+        border-bottom: 1px solid $gray-400;
+        padding-left: 15px;
+
         .fl-flow-header-title {
-            color: theme-color('primary');
+            align-self: flex-end;
+            text-transform: uppercase;
+            color: theme-color('main');
+            font-size: 1.25rem;
+            font-weight: normal;
+            margin-bottom: 1.25rem;
+            font-family: $font-family-base;
+
+        }
+    }
+    form {
+        margin-top: 1rem;
+        padding-left: 15px;
+    }
+}
+
+.fl-flow-buttons {
+    margin: 1rem auto 2rem;
+}
+
+@include media-breakpoint-down(sm) {
+    .fl-status-sidebar {
+        background-color: $white;
+        .fl-status-icon {
+            margin: 0 auto;
+        }
+        .fl-status-state {
+            display: none;
+        }
+
+        .fl-status {
+            background-color: $white;
+            .fl-status-icon svg {
+                .check {
+                    fill: theme-color('secondary');
+                }
+                .circle {
+                    fill: none;
+                }
+                .main {
+                    fill: $gray-400;
+                }
+            }
+            &.fl-done {
+                background-color: transparent;
+                .fl-status-icon svg {
+                    .check,
+                    .main {
+                        fill: theme-color('secondary');
+                    }
+                }
+            }
+            &.fl-active {
+                background-color: transparent;
+                .fl-status-icon svg {
+                    .check,
+                    .circle,
+                    .main {
+                        fill: theme-color('secondary');
+                    }
+                }
+            }
+            &.fl-active:before,
+            &.fl-done:before {
+                content: "";
+                position: absolute;
+                top: 49%;
+                height: 1px;
+                background-color: theme-color('secondary');
+                left: -25%;
+                width: 50%;
+            }
+
+        }
+    }
+    .fl-flow-content {
+        margin-left: 0;
+        .fl-flow-header {
+            height: auto;
+            .fl-flow-header-title {
+                margin-top: 2rem;
+            }
+        }
+        form {
+            padding-right: 15px;
 
         }
     }
@@ -849,7 +974,6 @@ H2 -> 38px
         transform: scale(1);
     }
 }
-
 
 
 /******* background colors *******/

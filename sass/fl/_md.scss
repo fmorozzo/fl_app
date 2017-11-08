@@ -1,0 +1,203 @@
+/******* MD FORM *******/
+
+.md-form {
+    input[type=date],
+    input[type=datetime-local],
+    input[type=email],
+    input[type=number],
+    input[type=password],
+    input[type=search-md],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=time],
+    input[type=url],
+    textarea.md-textarea {
+        border: 1px solid $gray-400;
+        border-radius: 3px;
+        padding-top: 1rem;
+        height: 1.5rem;
+        width: 100%;
+        width: -webkit-fill-available;
+        background-color: $white;
+    }
+
+    textarea.md-textarea {
+        padding: 1.5rem .75rem .5rem !important;
+
+    }
+    label {
+        color: $gray-400;
+        left: .8rem;
+    }
+    label.active {
+        top: 1.8rem;
+        font-size: .75rem;
+    }
+    .mdb-select-label {
+        left: .8rem;
+        font-size: 1rem;
+        top: .8rem;
+    }
+
+
+    input[type=date]:focus:not([readonly]),
+    input[type=datetime-local]:focus:not([readonly]),
+    input[type=email]:focus:not([readonly]),
+    input[type=number]:focus:not([readonly]),
+    input[type=password]:focus:not([readonly]),
+    input[type=search-md]:focus:not([readonly]),
+    input[type=search]:focus:not([readonly]),
+    input[type=tel]:focus:not([readonly]),
+    input[type=text]:focus:not([readonly]),
+    input[type=time]:focus:not([readonly]),
+    input[type=url]:focus:not([readonly]),
+    textarea.md-textarea:focus:not([readonly]) {
+        border-bottom: 1px solid theme-color('secondary');
+        -webkit-box-shadow: 0 1px 0 0 theme-color('secondary');
+        box-shadow: 0 1px 0 0 theme-color('secondary');
+    }
+    input[type=date]:focus:not([readonly]) + label,
+    input[type=datetime-local]:focus:not([readonly]) + label,
+    input[type=email]:focus:not([readonly]) + label,
+    input[type=number]:focus:not([readonly]) + label,
+    input[type=password]:focus:not([readonly]) + label,
+    input[type=search-md]:focus:not([readonly]) + label,
+    input[type=search]:focus:not([readonly]) + label,
+    input[type=tel]:focus:not([readonly]) + label,
+    input[type=text]:focus:not([readonly]) + label,
+    input[type=time]:focus:not([readonly]) + label,
+    input[type=url]:focus:not([readonly]) + label,
+    textarea.md-textarea:focus:not([readonly]) + label {
+        color: theme-color('secondary')
+    }
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+    padding-top: 2rem;
+}
+
+.select-wrapper span.caret {
+    z-index: 1;
+}
+
+/***************
+  Material select
+***************/
+
+.select-wrapper input.select-dropdown {
+
+    border: 1px solid $gray-400;
+    border-radius: 3px;
+    padding: .8rem .75rem .7rem;
+    height: 1.5rem;
+    color: $gray-400;
+
+}
+
+/*.select-wrapper input.select-dropdown:disabled {
+    color: rgba(0, 0, 0, 0.3);
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+}
+
+.select-wrapper .search-wrap {
+    padding: 1rem 0;
+    width: 93%;
+}
+
+.select-wrapper .search-wrap input {
+    padding-bottom: .4rem;
+}
+*/
+
+.select-wrapper span.caret {
+    color: $gray-400;
+    top: 1rem;
+    right: .5rem;
+    font-size: .875rem;
+}
+
+/*
+.select-wrapper span.caret.disabled {
+    color: rgba(0, 0, 0, 0.46);
+}
+
+.select-wrapper + label {
+    position: absolute;
+    top: -14px;
+    font-size: 0.8rem;
+}
+*/
+
+.dropdown-content li > a,
+.dropdown-content li > span {
+    color: $gray-800;
+}
+
+/*
+.select-wrapper i {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.select-wrapper ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+select {
+    display: none !important;
+}
+
+select.browser-default {
+    display: block !important;
+}
+
+select:disabled {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.select-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.select-dropdown li img {
+    height: 30px;
+    width: 30px;
+    margin: 3px 12px;
+    float: right;
+}
+
+.select-dropdown li.disabled,
+.select-dropdown li.disabled > span,
+.select-dropdown li.optgroup {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: transparent !important;
+    cursor: context-menu;
+}
+
+.select-dropdown li.optgroup {
+    border-top: 1px solid #eee;
+}
+
+.select-dropdown li.optgroup.selected > span {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.select-dropdown li.optgroup > span {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.multiple-select-dropdown li [type="checkbox"] + label {
+    height: 10px;
+}
+*/
+
+.mdb-select ul.select-dropdown {
+    border: 1px solid $gray-400;
+    border-radius: 3px;
+    background-color: $white;
+}

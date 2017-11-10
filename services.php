@@ -17,7 +17,8 @@
 </head>
 <nav class="fl-primary-nav navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="img/svg/logo/horizontal/white.svg" alt="Facility Lockers logo" class="fl-brand-logo"></a>
+        <a class="navbar-brand" href="#"><span class="fl-brand-logo">
+        <?php include 'includes/svg/logo/darkBG.svg';?></span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -56,7 +57,7 @@
 <section class="fl-section fl-section-services">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-7 mx-auto text-center">
+            <div class="col-12 col-md-9 mx-auto text-center">
                 <h1 class="fl-slogan">Do not waste your time. Let’s <em>facility lockers</em> do the job for you!</h1>
             </div>
         </div>
@@ -290,8 +291,8 @@
                 </div>
             </div>
             <div class="modal-footer mx-auto">
-                <button type="button" class="btn btn-secondaryOfficial px-5" data-dismiss="modal">cancel</button>
-                <a href="dry_cleaning01.php" class="btn btn-secondary px-5">book</a>
+                <button type="button" class="btn btn-secondaryOfficial px-4" data-dismiss="modal">cancel</button>
+                <a href="dry_cleaning01.php" class="btn btn-secondary px-4">book</a>
             </div>
         </div>
     </div>

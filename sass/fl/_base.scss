@@ -58,6 +58,17 @@ H2 -> 38px
 .fl-primary-nav {
     font-family: $font-family-headings;
     font-weight: $font-weight-normal;
+    @include media-breakpoint-down(xs) {
+        .navbar-brand {
+            width: 50px;
+        }
+        .fl-brand-logo {
+            width: 75%;
+            .text {
+                display: none;
+            }
+        }
+    }
     .navbar-nav {
         padding-right: 3rem;
         margin-left: auto;
@@ -514,6 +525,33 @@ H2 -> 38px
     }
 }
 
+@include media-breakpoint-down(xs) {
+    .fl-quick-access-nav {
+        .fl-nav-title {
+            display: none;
+        }
+        .navbar-collapse {
+            flex: 0 0 100%;
+            max-width: 100%;
+            .navbar-nav {
+                margin: 0 auto !important;
+                width: 100%;
+                .nav-item {
+                    width: 100%;
+                    .nav-link {
+                        padding-left: 0;
+                        width: inherit;
+                        &:before {
+                            background-position: center center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 /******* SERVICES ****/
 
 /* Main section */
@@ -559,6 +597,11 @@ H2 -> 38px
             font-weight: $font-weight-bold;
             font-style: normal;
             color: theme-color('primary');
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        .fl-slogan {
+            font-size: 2rem;
         }
     }
     .container {
@@ -791,6 +834,11 @@ H2 -> 38px
             svg .circle {
                 fill: none;
             }
+
+            @include media-breakpoint-down(xs) {
+                margin-left: -15px;
+
+            }
         }
         .fl-status-state {
             .fl-status-title {
@@ -928,6 +976,11 @@ H2 -> 38px
                 background-color: theme-color('secondary');
                 left: -25%;
                 width: 50%;
+                @include media-breakpoint-down(xs) {
+                    top: 51%;
+                    left: -25%;
+                    width: 40%;
+                }
             }
 
         }

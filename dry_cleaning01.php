@@ -18,7 +18,8 @@
 </head>
 <nav class="fl-primary-nav navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="img/svg/logo/horizontal/white.svg" alt="Facility Lockers logo" class="fl-brand-logo"></a>
+        <a class="navbar-brand" href="#"><span class="fl-brand-logo">
+        <?php include 'includes/svg/logo/darkBG.svg';?></span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
